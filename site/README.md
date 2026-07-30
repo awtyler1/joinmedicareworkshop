@@ -54,10 +54,13 @@ people.
 
 - `License #[pending]` — license number, on about.html
 - ZIP code for the Monarch Street office, if you want it shown
-- The Google reviews block on index.html links to a Maps search as a working
-  placeholder. Replace with the direct Business Profile review URL, and
-  confirm the exact review count and star rating before either is stated.
-- Verbatim review quotes, once screened (see below)
+- TWO Google links are needed. The read link (Business Profile / Maps place
+  URL) replaces the Maps search placeholder in the reviews block on
+  index.html and the "Google page" link on workshops.html. The write link
+  (`g.page/r/.../review`) is not for the site; it is for post-workshop
+  follow-up emails and texts.
+- Confirm the exact review count and star rating before either is stated on
+  the page. The copy currently says "nearly 70" and claims no rating.
 - Contact form on contact.html is a visual demo. Wire to GoHighLevel or an
   email endpoint before launch.
 
@@ -72,6 +75,26 @@ Before quoting any review verbatim, screen it: no plan names, no benefit
 details, nothing that reads as a plan endorsement, or it stops being an
 educational-event page. Quote exactly as written, attribute as Google shows
 it, and never edit a quote in a way that changes its meaning.
+
+Reviews currently used, all complete and unedited:
+
+| Review | Where | Why it was chosen |
+|--------|-------|-------------------|
+| Betty Hunt | home, workshops | Names the seminar and the outcome we promise: she understood Medicare when she left |
+| Jeff Jones | home, workshops | Attended a live session, describes the presentation |
+| Heyward Harrington | home | "without being pushy" is the No-Pitch Promise in a stranger's words |
+| Doug Stikeleather | home | "explained everything so I could easily understand" |
+| Mary Roy | home | "made me feel very comfortable" |
+| Robert Estep | home | Warm and human, no plan references |
+
+Deliberately not used, despite being strong: anything naming Medicare
+Advantage, supplement, gap, or health plans (Teresa Ratliff, Brian Tune, Amy
+Wellman, Michelle Wu, Mark Pearson), because plan-type references undercut
+the educational-event framing. Also skipped: life-insurance reviews (Zach
+Hopewell), reviews truncated by Google's "View full review" (Brenda Ball
+Heilig, John Mello) since a partial quote cannot be verified as written, and
+Gwen Perkins, whose review mentions food at an in-person seminar and would
+mislead someone booking a webinar.
 
 ## Icons
 
