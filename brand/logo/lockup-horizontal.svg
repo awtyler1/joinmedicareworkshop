@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="120" viewBox="0 0 420 120" role="img" aria-label="The Medicare Workshop logo">
+  <!-- Horizontal lockup. NOTE: wordmark uses live text with font
+       fallbacks for now — before print/merch use, convert text to
+       outlines in a vector editor with Fraunces + Atkinson loaded. -->
+  <g transform="translate(14,14) scale(0.7)">
+    <path d="M18 62 L42 88 L96 12" fill="none" stroke="#1F4A38" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8 108 Q56 128 104 108" fill="none" stroke="#B97F24" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(122,44)">
+    <text font-family="Atkinson Hyperlegible, Gill Sans, Trebuchet MS, sans-serif" font-size="14" letter-spacing="5" fill="#B97F24" font-weight="700">THE</text>
+    <text y="32" font-family="Fraunces, Iowan Old Style, Palatino, Georgia, serif" font-size="34" fill="#1F4A38" font-weight="600">Medicare Workshop</text>
+  </g>
+</svg>

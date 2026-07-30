@@ -1,0 +1,173 @@
+/* ==========================================================================
+   THE MEDICARE WORKSHOP — DESIGN TOKENS
+   Single source of truth. Every page imports this file first.
+   Change a value here, and every page updates together.
+
+   Production font loading (put in <head> BEFORE this stylesheet):
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+   ========================================================================== */
+
+:root {
+
+  /* ----- TYPE FAMILIES -----
+     Display: Fraunces — a warm, soft-terminal serif. Friendly authority;
+       feels like a well-set book, never like a government form.
+     Body/UI: Atkinson Hyperlegible — designed by the Braille Institute
+       specifically for low-vision readers. Distinct letterforms
+       (1/l/I, 0/O) that stay readable at every size. Our audience IS
+       its design brief — and "we set our site in a typeface designed
+       for aging eyes" is a brand story in itself.
+     Fallbacks keep the same voice when webfonts are unavailable. */
+  --font-display: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --font-body: 'Atkinson Hyperlegible', 'Gill Sans', 'Trebuchet MS', 'Segoe UI', Verdana, system-ui, sans-serif;
+
+  /* ----- TYPE SCALE (1.25 ratio on a 20px base — senior-first) -----
+     Body text NEVER goes below --text-md on marketing pages.
+     --text-xs exists only for legal footers. */
+  --text-xs: 15px;      /* legal fine print only */
+  --text-sm: 16.5px;    /* captions, labels, helper text */
+  --text-md: 20px;      /* BODY DEFAULT — do not shrink */
+  --text-lg: 25px;      /* ledes, pull text */
+  --text-xl: 31px;      /* section subheads */
+  --text-2xl: 39px;     /* section headlines */
+  --text-3xl: 49px;     /* page headlines */
+  --text-4xl: 61px;     /* hero, large screens only */
+  --leading-body: 1.65;
+  --leading-tight: 1.12;
+  --tracking-label: .12em;   /* uppercase labels/eyebrows */
+  --measure: 62ch;           /* max width for running text */
+
+  /* ----- COLOR: CORE PALETTE -----
+     Named for the world they come from, so choices stay grounded. */
+  --bluegrass: #1F4A38;      /* primary — trust, depth, Kentucky green */
+  --evening: #143326;        /* darkest green — footers, hover states */
+  --oak: #B97F24;            /* the rocker — warmth, accent, highlights */
+  --oak-light: #EBDDBE;      /* honey wash — soft highlight underlays */
+  --barn: #A34A2E;           /* warm brick — urgency, strikethrough, seals.
+                                NEVER use pure red; alarm is off-brand. */
+  --linen: #F8F4EA;          /* page ground — warm oat paper */
+  --linen-deep: #EDE7D6;     /* section tint, borders, dividers */
+  --porch: #FFFDF8;          /* card surfaces — warm white */
+  --walnut: #2A2519;         /* text ink — warm near-black, never #000 */
+  --walnut-soft: #5D553F;    /* secondary text */
+
+  /* ----- COLOR: SEMANTIC ROLES (use these in components) ----- */
+  --bg-page: var(--linen);
+  --bg-card: var(--porch);
+  --bg-section-tint: var(--linen-deep);
+  --bg-inverse: var(--bluegrass);
+  --bg-footer: var(--evening);
+  --text-primary: var(--walnut);
+  --text-secondary: var(--walnut-soft);
+  --text-heading: var(--evening);
+  --text-on-inverse: #E8E2D0;
+  --text-heading-on-inverse: var(--porch);
+  --accent: var(--oak);
+  --accent-wash: var(--oak-light);
+  --urgent: var(--barn);
+  --border: var(--linen-deep);
+  --focus-ring: var(--oak);
+
+  /* ----- SPACING (8px base; generous by default) ----- */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 72px;      /* default section padding */
+  --space-7: 104px;
+  --container: 1060px;  /* full layouts */
+  --container-narrow: 760px; /* long-form reading */
+
+  /* ----- SHAPE & ELEVATION ----- */
+  --radius-sm: 8px;     /* inputs, chips */
+  --radius-md: 14px;    /* cards, panels */
+  --radius-pill: 999px; /* phone pill, badges */
+  --shadow-card: 0 14px 36px rgba(42, 37, 25, .10);
+  --shadow-raised: 0 18px 44px rgba(20, 51, 38, .28);
+  --border-accent-top: 6px solid var(--oak); /* signature card top-strap */
+
+  /* ----- MOTION (one speed, one easing; calm by default) ----- */
+  --ease: cubic-bezier(.4, 0, .2, 1);
+  --duration: 180ms;
+}
+
+/* ----- BASE ELEMENT DEFAULTS ----- */
+body {
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: var(--leading-body);
+  margin: 0;
+}
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--text-heading);
+  line-height: var(--leading-tight);
+  text-wrap: balance;
+  font-weight: 600;
+}
+p { max-width: var(--measure); }
+
+/* ----- SIGNATURE COMPONENTS (identical on every page) ----- */
+
+/* The one true button. One primary CTA per screen. */
+.btn-primary {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 21px;                    /* never smaller — senior tap target */
+  color: var(--porch);
+  background: var(--bluegrass);
+  padding: 18px 36px;                 /* min 56px total height */
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 3px 0 var(--evening);
+  transition: background var(--duration) var(--ease);
+}
+.btn-primary:hover { background: var(--evening); }
+.btn-primary:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
+
+/* Eyebrow label above headlines */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* The honey highlight — our "marker pen", used on 2–4 words max */
+.hl { background: linear-gradient(transparent 62%, var(--accent-wash) 62%); padding: 0 2px; }
+
+/* Signature card */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+.card--strap { border-top: var(--border-accent-top); }
+
+/* Form fields — big, obvious, warm */
+.field input, .field select {
+  width: 100%;
+  font-size: 19px;
+  font-family: var(--font-body);
+  padding: 14px 15px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-page);
+  color: var(--text-primary);
+}
+.field input:focus, .field select:focus { outline: 3px solid var(--focus-ring); outline-offset: 1px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="240" viewBox="0 0 260 240" role="img" aria-label="The Medicare Workshop logo, stacked">
+  <!-- Stacked lockup for square placements (social avatars, signage).
+       Convert text to outlines before print/merch use. -->
+  <g transform="translate(91,10) scale(0.7)">
+    <path d="M18 62 L42 88 L96 12" fill="none" stroke="#1F4A38" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8 108 Q56 128 104 108" fill="none" stroke="#B97F24" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g text-anchor="middle" transform="translate(130,138)">
+    <text font-family="Atkinson Hyperlegible, Gill Sans, Trebuchet MS, sans-serif" font-size="13" letter-spacing="5" fill="#B97F24" font-weight="700">THE</text>
+    <text y="34" font-family="Fraunces, Iowan Old Style, Palatino, Georgia, serif" font-size="31" fill="#1F4A38" font-weight="600">Medicare</text>
+    <text y="68" font-family="Fraunces, Iowan Old Style, Palatino, Georgia, serif" font-size="31" fill="#1F4A38" font-weight="600">Workshop</text>
+  </g>
+</svg>
