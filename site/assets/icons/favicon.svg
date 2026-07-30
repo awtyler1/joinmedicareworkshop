@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="The Medicare Workshop">
+  <!-- Favicon treatment: the check alone on a Bluegrass tile. The rocker is
+       dropped below 24px per the brand book, since it muddies at small sizes.
+       The full mark with rocker is used for apple-touch-icon and up. -->
+  <rect width="32" height="32" rx="7" fill="#1F4A38"/>
+  <path d="M8 16.5 L13.6 22.2 L24 8.8" fill="none" stroke="#FFFDF8" stroke-width="4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

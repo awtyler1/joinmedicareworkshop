@@ -52,12 +52,50 @@ people.
 
 ## Placeholders still to replace before launch
 
-- `hello@joinmedicareworkshop.com` — real email address
-- `License #[pending]` — both license numbers, on about.html
+- `License #[pending]` — license number, on about.html
 - ZIP code for the Monarch Street office, if you want it shown
-- Testimonials on index.html — real, permissioned quotes
+- The Google reviews block on index.html links to a Maps search as a working
+  placeholder. Replace with the direct Business Profile review URL, and
+  confirm the exact review count and star rating before either is stated.
+- Verbatim review quotes, once screened (see below)
 - Contact form on contact.html is a visual demo. Wire to GoHighLevel or an
   email endpoint before launch.
+
+## Using the Google reviews
+
+Do NOT add `AggregateRating` structured data for reviews collected on Google.
+Google's own guidelines prohibit marking up third-party reviews as your own,
+and self-serving review markup is a known penalty risk for local businesses.
+Display them and link out instead, which is what the site does now.
+
+Before quoting any review verbatim, screen it: no plan names, no benefit
+details, nothing that reads as a plan endorsement, or it stops being an
+educational-event page. Quote exactly as written, attribute as Google shows
+it, and never edit a quote in a way that changes its meaning.
+
+## Icons
+
+`assets/icons/` holds the favicon set, generated from the Rocking Chair Check.
+Per the brand book, 16px and 32px use the check alone on a Bluegrass tile
+because the rocker muddies at that size; 180px and up carry the full mark.
+`site.webmanifest` covers Android home-screen installs.
+
+To regenerate after a logo change, redraw at 16x supersample and downscale.
+
+## The booking calendar
+
+The GoHighLevel iframe takes several seconds to render and shows nothing while
+it does, which on the main conversion page reads as broken. `workshops.html`
+now handles this:
+
+- `preconnect` to link.runonforge.us, and `form_embed.js` loads deferred from
+  `<head>` rather than at the end of the body
+- A branded loading panel covers the frame until the widget is actually drawn.
+  The iframe `load` event fires before the widget finishes rendering, so the
+  reveal waits for either a postMessage from the GHL origin or load plus an
+  800ms grace, whichever lands first
+- After 12 seconds with no widget, the panel swaps to the phone number and
+  email so a slow calendar never costs a booking
 
 ## Deployment (Vercel)
 
