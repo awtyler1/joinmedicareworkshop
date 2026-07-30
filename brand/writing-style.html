@@ -1,0 +1,231 @@
+<title>The Kitchen Table Voice — Writing Style Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --linen: #F8F4EA; --linen-deep: #EDE7D6; --porch: #FFFDF8;
+    --bluegrass: #1F4A38; --evening: #143326;
+    --oak: #B97F24; --oak-light: #EBDDBE; --barn: #A34A2E;
+    --walnut: #2A2519; --walnut-soft: #5D553F;
+    --serif: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+    --sans: 'Atkinson Hyperlegible', 'Gill Sans', 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--linen); color: var(--walnut); font-family: var(--sans); font-size: 18.5px; line-height: 1.68; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 26px; }
+  .kick { font-size: 13.5px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--oak); margin: 0 0 12px; }
+  h1 { font-family: var(--serif); font-size: clamp(36px, 5vw, 56px); color: var(--evening); line-height: 1.08; margin: 0 0 18px; text-wrap: balance; }
+  h2 { font-family: var(--serif); font-size: clamp(27px, 3.4vw, 38px); color: var(--evening); line-height: 1.14; margin: 0 0 16px; text-wrap: balance; }
+  h3 { font-family: var(--serif); font-size: 22px; color: var(--evening); margin: 0 0 10px; }
+  p { max-width: 66ch; }
+  .muted { color: var(--walnut-soft); }
+  header.page { padding: 72px 0 26px; }
+  section { padding: 50px 0; border-top: 2px solid var(--linen-deep); margin-top: 24px; }
+  .secno { font-size: 13px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--barn); margin: 0 0 10px; }
+
+  .writer { background: var(--porch); border: 1px solid var(--linen-deep); border-radius: 14px; padding: 30px 34px; margin: 26px 0; }
+  .writer .who { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 6px; }
+  .writer .who h3 { margin: 0; }
+  .writer .made { font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--oak); }
+  .writer .lesson { font-size: 18px; margin: 10px 0 16px; }
+  .writer blockquote { font-family: var(--serif); font-size: 20px; font-style: italic; color: var(--evening); border-left: 3px solid var(--oak); margin: 18px 0; padding: 4px 0 4px 22px; max-width: 60ch; }
+  .writer blockquote cite { display: block; font-family: var(--sans); font-style: normal; font-size: 14.5px; color: var(--walnut-soft); margin-top: 8px; }
+  .steal { background: var(--oak-light); border-radius: 10px; padding: 16px 20px; font-size: 17px; }
+  .steal b { color: var(--evening); }
+  .applied { margin-top: 16px; padding: 18px 22px; background: var(--linen); border: 1px dashed var(--oak); border-radius: 10px; }
+  .applied .lab { font-size: 12.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--barn); margin-bottom: 8px; }
+  .applied p { font-family: var(--serif); font-size: 19.5px; margin: 0; color: var(--walnut); }
+
+  .recipe { background: var(--evening); color: #E8E2D0; border-radius: 18px; padding: 44px 48px; margin: 30px 0; }
+  @media (max-width: 640px) { .recipe { padding: 30px 26px; } }
+  .recipe h2 { color: var(--porch); }
+  .recipe p { font-size: 19.5px; }
+  .recipe .formula { font-family: var(--serif); font-size: clamp(21px, 2.8vw, 27px); line-height: 1.5; color: var(--porch); margin: 20px 0; max-width: 58ch; }
+  .recipe .formula b { color: var(--oak-light); font-weight: 600; }
+
+  .moves { counter-reset: m; list-style: none; padding: 0; margin: 30px 0 0; }
+  .moves li { counter-increment: m; display: flex; gap: 20px; padding: 22px 0; border-top: 1px solid var(--linen-deep); }
+  .moves li::before { content: counter(m); flex: 0 0 42px; height: 42px; border-radius: 50%; background: var(--bluegrass); color: var(--linen); font-weight: 700; font-size: 19px; display: grid; place-items: center; }
+  .moves h3 { margin: 6px 0 6px; font-size: 20px; }
+  .moves p { margin: 0; font-size: 17.5px; color: var(--walnut-soft); }
+  .moves p em { color: var(--walnut); font-family: var(--serif); font-size: 18px; }
+
+  .ba { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--linen-deep); border-radius: 14px; overflow: hidden; margin: 24px 0; }
+  @media (max-width: 780px) { .ba { grid-template-columns: 1fr; } }
+  .ba > div { padding: 26px 30px; background: var(--porch); }
+  .ba .before { border-right: 1px solid var(--linen-deep); }
+  @media (max-width: 780px) { .ba .before { border-right: 0; border-bottom: 1px solid var(--linen-deep); } }
+  .ba h4 { margin: 0 0 12px; font-size: 13.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+  .ba .before h4 { color: var(--barn); }
+  .ba .after h4 { color: var(--bluegrass); }
+  .ba .before p { color: var(--walnut-soft); font-size: 17px; }
+  .ba .after p { font-family: var(--serif); font-size: 19px; }
+  .ba p { margin: 0 0 12px; max-width: 60ch; }
+
+  .guard { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px; }
+  @media (max-width: 780px) { .guard { grid-template-columns: 1fr; } }
+  .guard .g { background: var(--porch); border: 1px solid var(--linen-deep); border-radius: 12px; padding: 22px 26px; }
+  .guard h4 { font-size: 14px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--oak); margin: 0 0 10px; }
+  .guard p { margin: 0; font-size: 17px; color: var(--walnut-soft); }
+  .footer-pad { padding-bottom: 90px; }
+</style>
+
+<header class="page wrap">
+  <p class="kick">Brand system · Writing Style Guide · v1.0</p>
+  <h1>The Kitchen Table Voice</h1>
+  <p class="muted" style="font-size:21px; max-width:60ch">How we write about a boring subject without ever being boring. Built by studying the writers who did exactly that, then taking what's ours and leaving the rest.</p>
+</header>
+
+<section class="wrap">
+  <p class="secno">01 · The problem we're solving</p>
+  <h2>Medicare writing has two failure modes. We refuse both.</h2>
+  <p><b>Failure one: the government pamphlet.</b> Technically accurate, emotionally dead. "Beneficiaries may be subject to a late enrollment penalty." Nobody has ever finished reading one.</p>
+  <p><b>Failure two: the marketing screamer.</b> "SENIORS: You May Be MISSING OUT on Benefits!!" Loud, vague, and smells like a scam because it usually is one.</p>
+  <p>The entire industry writes in one of those two voices. That's the opportunity. The lane in between, respectful AND alive, is almost empty. We're going to own it.</p>
+</section>
+
+<section class="wrap">
+  <p class="secno">02 · The masters, and what we take from each</p>
+  <h2>Seven writers who made dull subjects impossible to put down</h2>
+
+  <div class="writer">
+    <div class="who"><h3>Warren Buffett</h3><span class="made">Made accounting a page-turner</span></div>
+    <p class="lesson">His shareholder letters explain derivatives and insurance float, and people read them for fun. His secret: he writes to his sisters Doris and Bertie. Real people, smart but not experts. And he never hides the unflattering part; he leads with it, which is why everyone believes the rest.</p>
+    <blockquote>"Only when the tide goes out do you discover who's been swimming naked."<cite>Berkshire Hathaway shareholder letter, 2001</cite></blockquote>
+    <div class="steal"><b>We steal:</b> write to one named reader, and make candor the hook. Our version of "swimming naked" is telling people exactly how we get paid before they ask.</div>
+    <div class="applied">
+      <div class="lab">Applied to Medicare</div>
+      <p>The government named the four parts A, B, C, and D, which suggests they expected you to learn them in order. Then they designed Part C to contain Parts A and B, and left D standing alone. We didn't design this system. We just translate it.</p>
+    </div>
+  </div>
+
+  <div class="writer">
+    <div class="who"><h3>Richard Feynman</h3><span class="made">Made quantum physics feel like common sense</span></div>
+    <p class="lesson">The Nobel physicist explained atomic behavior with rubber bands and wobbling plates. His rule: if you can't explain it to a freshman, you don't understand it yourself. He treated jargon as a confession that the writer gave up.</p>
+    <blockquote>"When we can't explain something in simple terms, it means we don't really understand it."<cite>Paraphrasing his standard for teaching, often called the Feynman Technique</cite></blockquote>
+    <div class="steal"><b>We steal:</b> every concept gets an analogy from the reader's own house. If we can't build one, we don't understand Medicare well enough yet to publish.</div>
+    <div class="applied">
+      <div class="lab">Applied to Medicare</div>
+      <p>Think of it as your house. Part A is the hospital bed. Part B is everyone who walks up to that bed: doctors, tests, the wheelchair. Part D is the pills on the nightstand. A Supplement is the roof over all three.</p>
+    </div>
+  </div>
+
+  <div class="writer">
+    <div class="who"><h3>Mister Rogers</h3><span class="made">Made television's calmest show its most trusted</span></div>
+    <p class="lesson">Fred Rogers rewrote every script through a filter his staff called "Freddish": anticipate the viewer's private fear, name it kindly, and never talk down. He knew his audience felt small in a confusing world, so he made the confusion the villain, never the viewer.</p>
+    <blockquote>"Anything that's human is mentionable, and anything that is mentionable can be more manageable."<cite>Fred Rogers, testimony and interviews, widely quoted</cite></blockquote>
+    <div class="steal"><b>We steal:</b> name the fear before the reader admits it, and put the blame where it belongs. Our readers ran households and careers. They are not bad at Medicare. Medicare is bad at explaining itself.</div>
+    <div class="applied">
+      <div class="lab">Applied to Medicare</div>
+      <p>Nobody tells you this part: it's normal to feel behind. You raised a family, worked forty years, and balanced a checkbook through three recessions. You are not bad at this. This was built confusing, and it can be un-confused in an hour.</p>
+    </div>
+  </div>
+
+  <div class="writer">
+    <div class="who"><h3>John McPhee</h3><span class="made">Made oranges, rocks, and canoes riveting</span></div>
+    <p class="lesson">McPhee wrote an entire acclaimed book about oranges. His engine is specificity: not "farmers face challenges" but one named grower, one frost, one night. The closer you look at anything, the more interesting it gets. Boring writing is writing from too far away.</p>
+    <blockquote>"If you're going to write about a place, you'd better be able to name the trees."<cite>The working principle behind his reporting, as taught in his Princeton seminar</cite></blockquote>
+    <div class="steal"><b>We steal:</b> zoom in. Never "many seniors are confused." Always one shoebox, one kitchen table, one Tuesday.</div>
+    <div class="applied">
+      <div class="lab">Applied to Medicare</div>
+      <p>Last Tuesday a woman in Georgetown showed us a shoebox holding 44 pieces of Medicare mail. Forty-one were ads. Two were duplicates. One mattered, and it had a deadline on it. This article is about finding that one.</p>
+    </div>
+  </div>
+
+  <div class="writer">
+    <div class="who"><h3>Mary Roach</h3><span class="made">Made cadavers and digestion into bestsellers</span></div>
+    <p class="lesson">Roach picks the subjects everyone avoids and writes about them with open delight. Her humor never mocks the subject or the reader; it comes from her own honest reactions. The reader keeps going because she's obviously having a good time, and it's contagious.</p>
+    <blockquote>"It's the boring bits I cut. Nobody ever put down a book because it was too interesting."<cite>Her stated editing principle, from interviews on her method</cite></blockquote>
+    <div class="steal"><b>We steal:</b> permission to find Medicare's absurdities genuinely funny, once per page. The humor targets the system, never the reader.</div>
+    <div class="applied">
+      <div class="lab">Applied to Medicare</div>
+      <p>Medicare's annual handbook is 128 pages long. We read it every year so you don't have to. We'd describe the experience as "like assembling furniture with instructions written by a committee of lawyers," because it is.</p>
+    </div>
+  </div>
+
+  <div class="writer">
+    <div class="who"><h3>Mark Twain &amp; Hemingway</h3><span class="made">Made plain American speech into literature</span></div>
+    <p class="lesson">Twain hunted the exact word: "the difference between the almost right word and the right word is the difference between the lightning bug and the lightning." Hemingway proved short declarative sentences hit harder than ornate ones. Together: plainness is not simplicity of thought. It's confidence.</p>
+    <blockquote>"Substitute 'damn' every time you're inclined to write 'very'; your editor will delete it and the writing will be just as it should be."<cite>Attributed to Twain; the principle stands either way</cite></blockquote>
+    <div class="steal"><b>We steal:</b> the exact word and the short sentence. "Penalty" not "potential cost implication." "Free" not "at no cost to you."</div>
+    <div class="applied">
+      <div class="lab">Applied to Medicare</div>
+      <p>Miss your Part B window and Medicare adds 10% to your premium for every year you waited. Not for one year. For life. It is the only bill that follows you to your 90th birthday party.</p>
+    </div>
+  </div>
+
+  <div class="writer">
+    <div class="who"><h3>Gary Provost &amp; David Ogilvy</h3><span class="made">Made rhythm and respect into sales tools</span></div>
+    <p class="lesson">Provost wrote the famous passage proving that sentence-length variation IS music: "This sentence has five words..." Vary the lengths and the page sings. Ogilvy built the biggest agency on earth on one belief: "The consumer isn't a moron; she is your wife." Long copy works when every line respects the reader's intelligence.</p>
+    <blockquote>"Write the way you talk. Naturally. Keep your sentences short. Never use jargon words. They are hallmarks of a pretentious ass."<cite>David Ogilvy, internal memo "How to Write," 1982</cite></blockquote>
+    <div class="steal"><b>We steal:</b> Provost's music and Ogilvy's respect. Read every draft aloud. If three sentences in a row have the same length, break one.</div>
+    <div class="applied">
+      <div class="lab">Applied to Medicare</div>
+      <p>You have options. Two, mainly. One costs more each month and lets you see any doctor in America who takes Medicare, which is most of them. The other costs less, sometimes nothing, and trades that freedom for a network and a copay. Neither is wrong. They are different bets on your own future, and by the end of this page you'll know which bet is yours.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <p class="secno">03 · Our lane</p>
+  <div class="recipe">
+    <h2>The Kitchen Table Voice</h2>
+    <p class="formula">Candid like <b>Buffett</b>. Kind like <b>Rogers</b>. Clear like <b>Feynman</b>. Close-up like <b>McPhee</b>. Musical like <b>Provost</b>. With one <b>Twain</b> wink per page, aimed at the system and never at the reader.</p>
+    <p>The test for every draft: could Austin read this aloud across a kitchen table to a sharp 78-year-old named Dorothy, without either of them cringing? If a sentence would embarrass you at that table, it's marketing. Cut it. If Dorothy would lean in, keep it.</p>
+    <p style="margin-bottom:0">Dorothy is our one reader. She's smart, busy, a little tired of being sold to, and she can spot a phony in one sentence. Everything we publish is a letter to her.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <p class="secno">04 · The ten moves</p>
+  <h2>The playbook, in the order you use it</h2>
+  <ol class="moves">
+    <li><div><h3>Answer in the first two sentences</h3><p>Dorothy came with a question. Hand her the answer, then earn the rest of her time with the why. <em>"Yes, you can keep your doctor on a Supplement. Here's the one exception to watch for."</em></p></div></li>
+    <li><div><h3>Write the letter to Dorothy</h3><p>One reader, second person, present tense. Never "seniors should consider." Always "you." The word "beneficiaries" is banned.</p></div></li>
+    <li><div><h3>Build the analogy from her house</h3><p>Kitchen, garden, church, weather, UK basketball, the Buick. Every abstract rule gets one concrete analogy, and only one. Two analogies per concept means neither worked.</p></div></li>
+    <li><div><h3>Zoom in until it's a story</h3><p>One shoebox of mail. One Tuesday phone call. One $412 surprise bill. Composite details are allowed only if true to life and never presented as a specific client's story without permission.</p></div></li>
+    <li><div><h3>Give the number, dated</h3><p>"$185 a month in 2026" beats "costs may vary" every single time. If we can't state the number, we say exactly why, which is also information.</p></div></li>
+    <li><div><h3>Play the music</h3><p>Vary sentence length on purpose. After two long sentences, throw a three-word one. Like this one. Read aloud before publishing; the ear catches what the eye forgives.</p></div></li>
+    <li><div><h3>Name the fear, blame the system</h3><p>Say the quiet part kindly: "it's normal to feel behind." Then put the blame where it belongs: the system was built confusing. Dorothy is never the problem.</p></div></li>
+    <li><div><h3>One wink, aimed upward</h3><p>Medicare's absurdities are legitimately funny. The 128-page handbook, the alphabet soup, the 44 mailers. Laugh at the maze, never at the person in it.</p></div></li>
+    <li><div><h3>Show the trade, not the winner</h3><p>Real choices are bets, not right answers. We lay out both sides of every trade honestly, including who each option is wrong for. That honesty is why she'll trust the rest.</p></div></li>
+    <li><div><h3>End with her next step</h3><p>One action, specific, doable in five minutes. A date to circle, a number to call, a line to fill in. Every piece ends with motion, not a summary.</p></div></li>
+  </ol>
+</section>
+
+<section class="wrap">
+  <p class="secno">05 · Proof it works</p>
+  <h2>The same paragraph, three ways</h2>
+  <p class="muted">Topic: the Part B late enrollment penalty. Watch the lane appear.</p>
+  <div class="ba">
+    <div class="before">
+      <h4>✕ The government pamphlet</h4>
+      <p>Individuals who do not enroll in Medicare Part B during their Initial Enrollment Period may be subject to a late enrollment penalty. This penalty is calculated as a 10 percent premium increase for each full 12-month period during which enrollment was delayed, and is applied for the duration of the beneficiary's enrollment.</p>
+    </div>
+    <div class="after">
+      <h4>✓ The Kitchen Table Voice</h4>
+      <p>Here's the rule nobody warns you about. If you skip Part B when your window opens, Medicare charges you 10% extra for every year you waited. Forever. Wait two years, pay 20% more, every month, for the rest of your life.</p>
+      <p>The fix is simple: know your window. Yours opens three months before your 65th birthday. Circle it on the calendar today, and this penalty can never touch you.</p>
+    </div>
+  </div>
+  <div class="ba">
+    <div class="before">
+      <h4>✕ The marketing screamer</h4>
+      <p>ATTENTION KENTUCKY SENIORS! Don't get TRAPPED by hidden Medicare penalties! Thousands are losing money every day and don't even know it! Call NOW before it's too late!!</p>
+    </div>
+    <div class="after">
+      <h4>✓ The Kitchen Table Voice</h4>
+      <p>The penalty is real, but it isn't hiding, and you have more time than the ads want you to think. Your window is three months before your 65th birthday to three months after. Inside that window, there's no penalty, no rush, and no reason to let anyone hurry you. Outside it, call us and we'll help you find the fastest clean way back in.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap footer-pad">
+  <p class="secno">06 · Guardrails</p>
+  <h2>Where bold stops</h2>
+  <div class="guard">
+    <div class="g"><h4>Never funny about fear</h4><p>Money running out, a spouse's health, memory. These get the Rogers treatment only: named kindly, never joked about. The wink lives in bureaucracy, not in anyone's life.</p></div>
+    <div class="g"><h4>Never clever over clear</h4><p>If a great line costs any comprehension, the line dies. We are read by people making real decisions with real money. Clarity outranks style every time they conflict.</p></div>
+    <div class="g"><h4>Never fake folksy</h4><p>Dorothy can smell a put-on accent a mile off. We write plainly because we talk plainly, not as a costume. No "golly," no forced y'all, no pretending we're older than we are.</p></div>
+    <div class="g"><h4>Never borrowed authority</h4><p>We quote Medicare.gov and CMS, not "experts say." We state what we don't know. When the honest answer is "it depends," we say so and then explain exactly what it depends on.</p></div>
+  </div>
+</section>
