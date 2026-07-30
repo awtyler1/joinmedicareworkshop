@@ -50,7 +50,9 @@ body {
   line-height: 1.65;
 }
 img { max-width: 100%; display: block; }
-a { color: var(--bluegrass); }
+/* break-word so a long email address cannot force a grid column
+   wider than a phone screen */
+a { color: var(--bluegrass); overflow-wrap: break-word; }
 
 h1, h2, h3 {
   font-family: var(--font-display);
@@ -106,9 +108,28 @@ section { padding: 74px 0; }
 }
 .header-phone:hover { background: var(--evening); }
 @media (max-width: 900px) {
-  .header-inner { padding: 10px 20px; }
-  .site-nav { order: 3; width: 100%; gap: 18px; padding-bottom: 6px; overflow-x: auto; }
-  .site-nav a { font-size: 16.5px; white-space: nowrap; }
+  .header-inner { padding: 9px 18px; gap: 12px; }
+  /* Nav must NOT wrap here. Wrapping pushed the sticky header to 259px,
+     which ate 31% of a phone screen permanently. One scrollable row. */
+  .site-nav {
+    order: 3; width: 100%; gap: 20px; padding-bottom: 2px;
+    overflow-x: auto; flex-wrap: nowrap; scrollbar-width: none;
+  }
+  .site-nav::-webkit-scrollbar { display: none; }
+  .site-nav a { font-size: 16.5px; white-space: nowrap; padding: 4px 0; }
+  .brand .name { font-size: 18px; }
+  .brand .name small { display: none; }  /* sub-label costs a line we can't spare */
+  .brand svg { width: 28px; height: 33px; }
+  .header-phone { font-size: 16px; padding: 9px 16px; }
+}
+/* Under 560px the wordmark and the phone pill cannot share a row (they need
+   414px of a 324px row), which forced the sticky header to three rows and
+   19% of the screen. The mark alone carries the brand here; the phone number
+   stays visible because this audience calls. */
+@media (max-width: 560px) {
+  .brand .name { display: none; }
+  .brand { gap: 0; }
+  .header-inner { gap: 10px; }
 }
 
 /* ---------- Buttons ---------- */
@@ -140,6 +161,9 @@ section { padding: 74px 0; }
 .card--strap { border-top: 6px solid var(--oak); }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+/* Grid children default to min-width:auto and refuse to shrink below their
+   min-content width. Without this, one long word overflows the page. */
+.grid-2 > *, .grid-3 > * { min-width: 0; }
 @media (max-width: 880px) { .grid-3 { grid-template-columns: 1fr; } }
 @media (max-width: 760px) { .grid-2 { grid-template-columns: 1fr; } }
 

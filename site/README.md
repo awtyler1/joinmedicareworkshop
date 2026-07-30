@@ -32,15 +32,19 @@ one falls back to a "Photo coming soon" panel, so nothing looks broken.
 
 | File | What it is | Notes |
 |------|-----------|-------|
-| `austin-portrait.jpg` | Austin, alone | Portrait orientation, 1200×1500 or larger. **This is the only one the site currently uses.** |
+| `austin-tyler.jpg` | Austin, alone | Portrait orientation. **In place.** Optimized to 1000×1250 / 128 KB. |
 
 The site is host-cards-for-Austin-only for now. Andrew Horn is still credited
 in the prose on both the home and about pages, he just has no card or photo
 until a higher-resolution headshot exists. To restore the two-up layout later,
 swap `.host--solo` back to the `.hosts` grid and add a second card.
 
-Also parked until photos exist: `austin-andrew.jpg`, the candid of both hosts
-that opened the about page.
+Also parked until photos exist: `andrew-portrait.jpg`, and `austin-andrew.jpg`,
+the candid of both hosts that opened the about page.
+
+Optimize any new photo before committing: roughly 1000px on the long edge,
+JPEG quality 82, progressive. A 1.6 MB original becomes about 128 KB with no
+visible difference at the sizes the site renders.
 
 Per the brand photography direction: real places (office, kitchen table,
 porch), natural light, no gradient studio backdrops, no stock, no AI-generated
