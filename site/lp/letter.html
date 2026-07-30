@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I'll Walk You Through Medicare | Austin Tyler, Lexington KY</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#FDFCF9">
+<link rel="preconnect" href="https://link.runonforge.us" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- TYPE: Libre Franklin alone, weights 400/600/800. One family, no serif at all.
+     American, civic, plain-spoken. The restraint IS the design. -->
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;800&display=swap" rel="stylesheet">
+<script src="https://link.runonforge.us/js/form_embed.js" defer></script>
+<style>
+:root{
+  --f:'Libre Franklin','Helvetica Neue',Arial,system-ui,sans-serif;
+  --bg:#FDFCF9;--card:#FFFFFF;--line:#E8E4DB;
+  --green:#1F4A38;--green-d:#143326;--oak:#B97F24;
+  --ink:#1C1A17;--ink-2:#615B51;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);line-height:1.6;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:var(--green)}
+
+.page{max-width:720px;margin:0 auto;padding:clamp(26px,5vw,60px) clamp(20px,5vw,28px) clamp(30px,5vw,54px)}
+
+/* A person, first. Then what they say. */
+.who{display:flex;align-items:center;gap:16px;margin-bottom:clamp(22px,4vh,34px)}
+.who .av{width:64px;height:64px;border-radius:50%;overflow:hidden;flex:0 0 auto;background:var(--line);border:2px solid #fff;box-shadow:0 3px 12px rgba(28,26,23,.14)}
+.who .av img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.who .nm{font-size:16px;font-weight:600;line-height:1.35}
+.who .nm em{display:block;font-style:normal;font-weight:400;color:var(--ink-2);font-size:14.5px;margin-top:1px}
+
+h1{
+  font-weight:800;font-size:clamp(31px,5.4vw,50px);line-height:1.13;
+  letter-spacing:-.022em;color:var(--ink);margin:0 0 clamp(14px,2.2vh,20px);text-wrap:balance;
+}
+h1 span{color:var(--green)}
+.sub{font-size:clamp(17px,2.1vw,20.5px);line-height:1.6;color:var(--ink-2);margin:0 0 clamp(10px,1.6vh,16px)}
+.sub b{color:var(--ink);font-weight:600}
+.sig{
+  font-size:clamp(16px,2vw,18.5px);color:var(--ink-2);margin:0 0 clamp(26px,4.5vh,40px);
+  padding-left:16px;border-left:3px solid var(--oak);
+}
+
+.book{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;position:relative;min-height:660px;box-shadow:0 10px 30px rgba(28,26,23,.07)}
+.book iframe{width:100%;min-height:640px;border:0;opacity:0;transition:opacity .3s ease}
+.book.ready iframe{opacity:1}
+.calload{position:absolute;inset:10px;display:grid;place-items:center;text-align:center;padding:26px;background:var(--card);border-radius:9px;z-index:2;transition:opacity .3s ease}
+.book.ready .calload{opacity:0;visibility:hidden;pointer-events:none}
+.spin{width:34px;height:34px;border-radius:50%;border:3px solid var(--line);border-top-color:var(--oak);animation:sp .9s linear infinite;margin:0 auto 16px}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation:none}}
+.calload h2{font-size:20px;font-weight:600;margin:0 0 8px;color:var(--green-d)}
+.calload p{margin:0;font-size:16px;color:var(--ink-2);max-width:34ch}
+
+.after{margin-top:clamp(20px,3.5vh,30px);display:flex;flex-wrap:wrap;gap:10px 24px;font-size:15.5px;color:var(--ink-2)}
+.after span{display:flex;align-items:center;gap:8px;font-weight:500}
+.after span b{font-weight:800;color:var(--green)}
+.callline{margin:clamp(14px,2vh,18px) 0 0;font-size:17px;color:var(--ink-2)}
+.callline a{font-weight:600;white-space:nowrap}
+
+.legal{margin:clamp(26px,4vh,40px) 0 0;font-size:12px;line-height:1.55;color:var(--ink-2);opacity:.75}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="who">
+    <div class="av"><img src="/assets/images/austin-tyler.jpg" alt="Austin Tyler"></div>
+    <div class="nm">Austin Tyler, MBA<em>Licensed agent · Lexington, Kentucky</em></div>
+  </div>
+
+  <h1>I'm Austin. I'll walk you through Medicare <span>myself.</span></h1>
+
+  <p class="sub">Not a call center in another state. Not a script. Just me, on the phone or on a screen, for as long as it takes to answer your questions. I've done this with <b>over 1,000 Kentuckians</b>, and I do it every single day.</p>
+
+  <p class="sig">It costs you nothing, I won't pitch you a plan, and you decide what happens next. Pick a time that suits you.</p>
+
+  <div class="book" id="bk">
+    <div class="calload" id="ld">
+      <div>
+        <div class="spin" aria-hidden="true"></div>
+        <h2>Loading my calendar</h2>
+        <p>A few seconds. If you'd rather not wait, call <a href="tel:+18596186443">(859) 618-6443</a>.</p>
+      </div>
+    </div>
+    <iframe id="cf" src="https://link.runonforge.us/widget/booking/op00KeLdI1rg31F7lA6c" scrolling="no" title="Pick a time to talk with Austin"></iframe>
+  </div>
+
+  <div class="after">
+    <span><b>1,000+</b> Kentuckians helped</span>
+    <span><b>68</b> Google reviews</span>
+    <span><b>$0</b> cost to you, ever</span>
+  </div>
+  <p class="callline">Or skip all this and call me: <a href="tel:+18596186443">(859) 618-6443</a>.</p>
+
+  <p class="legal">Educational event only. No plan benefits discussed, no enrollment taken. Tyler Insurance Group is a licensed insurance agency, not affiliated with or endorsed by the U.S. government or the federal Medicare program. <a href="https://www.medicare.gov">Medicare.gov</a> · 1-800-MEDICARE (TTY 1-877-486-2048).</p>
+</div>
+
+<script>
+(function(){var b=document.getElementById('bk'),f=document.getElementById('cf'),d=false;
+function go(){if(d)return;d=true;b.classList.add('ready')}
+f.addEventListener('load',function(){setTimeout(go,800)});
+window.addEventListener('message',function(e){if((e.origin||'').indexOf('runonforge')>-1)go()});
+setTimeout(function(){if(!d)document.getElementById('ld').innerHTML='<div><h2>The calendar is being slow.</h2><p>Call <a href="tel:+18596186443">(859) 618-6443</a> and I will find you a time in about a minute.</p></div>'},12000);})();
+</script>
+</body>
+</html>
