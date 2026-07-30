@@ -28,6 +28,18 @@ We are doing this to serve seniors.
 - [ ] No jargon a smart 78-year-old wouldn't use at their kitchen table
 - [ ] Body text 20px or larger; headings from the token scale
 
+## Range (do this before drafting, not after)
+
+- [ ] The reader's problem is written at the top of the file in one sentence
+- [ ] The form was chosen to fit that problem, not out of habit
+      (see `brand/article-forms.html` for the repertoire of ten)
+- [ ] Form is different from the last published piece
+- [ ] Opening move is different from the last published piece
+- [ ] Length was decided on purpose; 200 words is a legitimate answer
+- [ ] Passed the surprise test: there is one line, number, or reframe
+      Dorothy would repeat to her daughter tonight
+- [ ] Row added to `content/published-log.md` at publish time
+
 ## The five editing questions (ask in order)
 
 1. What do people need right now?
