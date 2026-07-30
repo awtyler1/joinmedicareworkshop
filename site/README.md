@@ -32,13 +32,15 @@ one falls back to a "Photo coming soon" panel, so nothing looks broken.
 
 | File | What it is | Notes |
 |------|-----------|-------|
-| `austin-portrait.jpg` | Austin, alone | Portrait orientation, 1200×1500 or larger |
-| `andrew-portrait.jpg` | Andrew, alone | Same crop and resolution as Austin's so they pair |
-| `austin-andrew.jpg` | Both together, candid | Landscape, 16:9 friendly. Mid-conversation beats posed |
+| `austin-portrait.jpg` | Austin, alone | Portrait orientation, 1200×1500 or larger. **This is the only one the site currently uses.** |
 
-Host cards are cropped 4:5 (portrait), which suits headshots. Andrew's current
-headshot is much lower resolution than Austin's; it will look soft beside his
-until a larger version is available.
+The site is host-cards-for-Austin-only for now. Andrew Horn is still credited
+in the prose on both the home and about pages, he just has no card or photo
+until a higher-resolution headshot exists. To restore the two-up layout later,
+swap `.host--solo` back to the `.hosts` grid and add a second card.
+
+Also parked until photos exist: `austin-andrew.jpg`, the candid of both hosts
+that opened the about page.
 
 Per the brand photography direction: real places (office, kitchen table,
 porch), natural light, no gradient studio backdrops, no stock, no AI-generated
