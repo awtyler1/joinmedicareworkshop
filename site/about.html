@@ -48,9 +48,9 @@ section{padding:74px 0}.tint{background:var(--linen-deep)}
 @media(max-width:880px){.grid-3{grid-template-columns:1fr}}@media(max-width:760px){.grid-2{grid-template-columns:1fr}}
 .hosts{display:grid;grid-template-columns:1fr 1fr;gap:30px}@media(max-width:760px){.hosts{grid-template-columns:1fr}}
 .host{background:var(--porch);border:1px solid var(--linen-deep);border-radius:var(--radius-md);overflow:hidden}
-.host .portrait{aspect-ratio:4/3;background:var(--linen-deep);position:relative}
-.host .portrait img{width:100%;height:100%;object-fit:cover}
-.host .portrait .placeholder{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:18px;font-size:14.5px;font-weight:700;color:var(--walnut-soft);background:repeating-linear-gradient(45deg,var(--linen-deep),var(--linen-deep) 14px,var(--linen) 14px,var(--linen) 28px)}
+.host .portrait{aspect-ratio:4/5;background:var(--linen-deep);position:relative;overflow:hidden}
+.host .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%;z-index:1}
+.host .portrait .placeholder{position:absolute;inset:0;z-index:0;display:grid;place-items:center;text-align:center;padding:18px;font-size:14.5px;font-weight:700;color:var(--walnut-soft);background:repeating-linear-gradient(45deg,var(--linen-deep),var(--linen-deep) 14px,var(--linen) 14px,var(--linen) 28px)}
 .host .body{padding:26px 28px 30px}.host h3{margin:0 0 4px;font-size:24px}
 .host .role{font-size:14.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--oak);margin:0 0 14px}
 .host p{margin:0 0 14px;font-size:18.5px;color:var(--walnut-soft)}
@@ -74,8 +74,8 @@ section{padding:74px 0}.tint{background:var(--linen-deep)}
 .promises h3{margin:0 0 6px;font-size:21px}
 .promises p{margin:0;font-size:18.5px;color:var(--walnut-soft)}
 .together{border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--linen-deep);background:var(--linen-deep);aspect-ratio:16/9;position:relative;margin-bottom:44px}
-.together img{width:100%;height:100%;object-fit:cover}
-.together .placeholder{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px;font-size:15px;font-weight:700;color:var(--walnut-soft);background:repeating-linear-gradient(45deg,var(--linen-deep),var(--linen-deep) 16px,var(--linen) 16px,var(--linen) 32px)}
+.together img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.together .placeholder{position:absolute;inset:0;z-index:0;display:grid;place-items:center;text-align:center;padding:20px;font-size:15px;font-weight:700;color:var(--walnut-soft);background:repeating-linear-gradient(45deg,var(--linen-deep),var(--linen-deep) 16px,var(--linen) 16px,var(--linen) 32px)}
 </style>
 </head>
 <body>
@@ -93,7 +93,7 @@ section{padding:74px 0}.tint{background:var(--linen-deep)}
       <a href="/about" aria-current="page">About</a>
       <a href="/contact">Contact</a>
     </nav>
-    <a class="header-phone" href="tel:+18595550123">(859) 555-0123</a>
+    <a class="header-phone" href="tel:+18596186443">(859) 618-6443</a>
   </div>
 </header>
 
@@ -108,7 +108,7 @@ section{padding:74px 0}.tint{background:var(--linen-deep)}
 <section style="padding-top:26px">
   <div class="wrap">
     <div class="together">
-      <div class="placeholder">PHOTO PENDING<br>site/assets/images/austin-andrew.jpg<br><span style="font-weight:400">Candid of Austin and Andrew together, natural light</span></div>
+      <div class="placeholder">Photo coming soon</div><img src="/assets/images/austin-andrew.jpg" alt="Austin Tyler and Andrew Horn" onerror="this.remove()">
     </div>
     <div class="wrap-narrow story" style="padding:0">
       <p class="first">It started with a kitchen table and a stack of mail. Someone in the family was turning 65, the mailers had been arriving for months, and nobody could tell which envelope mattered and which one was an ad dressed up to look official.</p>
@@ -125,18 +125,18 @@ section{padding:74px 0}.tint{background:var(--linen-deep)}
     <h2>We'll be the ones on your screen.</h2>
     <div class="hosts">
       <div class="host">
-        <div class="portrait"><div class="placeholder">PHOTO PENDING<br>site/assets/images/austin-portrait.jpg</div></div>
+        <div class="portrait"><div class="placeholder">Photo coming soon</div><img src="/assets/images/austin-portrait.jpg" alt="Austin Tyler, MBA, founder of Tyler Insurance Group" onerror="this.remove()"></div>
         <div class="body">
-          <h3>Austin Tyler</h3>
+          <h3>Austin Tyler, MBA</h3>
           <p class="role">Founder, Tyler Insurance Group</p>
           <p>Austin started Tyler Insurance Group after watching his own family struggle through Medicare paperwork. His standard for every class: if his grandmother wouldn't understand it, it doesn't get said that way.</p>
           <p>Licensed insurance agent, Kentucky. License #[pending]</p>
         </div>
       </div>
       <div class="host">
-        <div class="portrait"><div class="placeholder">PHOTO PENDING<br>site/assets/images/andrew-portrait.jpg</div></div>
+        <div class="portrait"><div class="placeholder">Photo coming soon</div><img src="/assets/images/andrew-portrait.jpg" alt="Andrew Horn, licensed agent" onerror="this.remove()"></div>
         <div class="body">
-          <h3>Andrew [Last Name]</h3>
+          <h3>Andrew Horn</h3>
           <p class="role">Co-Host, Licensed Agent</p>
           <p>Andrew has walked hundreds of Kentuckians through their first Medicare decisions. He runs the Q&amp;A and refuses to end it while a hand is still raised.</p>
           <p>Licensed insurance agent, Kentucky. License #[pending]</p>
@@ -186,7 +186,7 @@ section{padding:74px 0}.tint{background:var(--linen-deep)}
     <h2 style="max-width:24ch;margin:0 auto 16px">Come see whether we live up to it.</h2>
     <p style="font-size:21px;color:var(--walnut-soft);max-width:50ch;margin:0 auto 32px">One free hour, no pitch. If we're useful, you'll know. If we're not, you've lost an hour and you can say so publicly.</p>
     <a class="btn" href="/workshops">Save My Free Seat</a>
-    <p class="btn-note">Or call (859) 555-0123 and talk to one of us directly.</p>
+    <p class="btn-note">Or call (859) 618-6443 and talk to one of us directly.</p>
   </div>
 </section>
 
@@ -200,7 +200,7 @@ section{padding:74px 0}.tint{background:var(--linen-deep)}
           <svg width="30" height="35" viewBox="0 0 112 132" aria-hidden="true"><path d="M18 62 L42 88 L96 12" fill="none" stroke="#FFFDF8" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 108 Q56 128 104 108" fill="none" stroke="#B97F24" stroke-width="9" stroke-linecap="round"/></svg>
           <span class="name">The Medicare Workshop</span>
         </div>
-        <p style="margin:0">Free Medicare education for Kentucky seniors, taught by licensed local agents. Lexington, Kentucky.</p>
+        <p style="margin:0 0 10px">Free Medicare education for Kentucky seniors, taught by licensed local agents.</p><p style="margin:0">1029 Monarch Street, Suite 110<br>Lexington, KY</p>
       </div>
       <div>
         <h4>Pages</h4>
@@ -215,7 +215,7 @@ section{padding:74px 0}.tint{background:var(--linen-deep)}
       <div>
         <h4>Talk to a person</h4>
         <ul>
-          <li><a href="tel:+18595550123">(859) 555-0123</a></li>
+          <li><a href="tel:+18596186443">(859) 618-6443</a></li>
           <li><a href="mailto:hello@joinmedicareworkshop.com">hello@joinmedicareworkshop.com</a></li>
           <li>Monday to Friday, 9am to 5pm ET</li>
         </ul>

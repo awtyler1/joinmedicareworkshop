@@ -26,29 +26,29 @@ into each page's style block. Tokens mirror `brand/tokens.css`.
 
 ## Photos needed
 
-Drop these into `assets/images/` with these exact names and they slot in
-automatically, replacing the labeled placeholders:
+Drop these into `assets/images/` with these exact names. The pages already
+reference them, so they appear as soon as the files exist. Until then, each
+one falls back to a "Photo coming soon" panel, so nothing looks broken.
 
 | File | What it is | Notes |
 |------|-----------|-------|
-| `austin-portrait.jpg` | Austin, alone | Natural window light, real setting, 1200×1500 or larger |
-| `andrew-portrait.jpg` | Andrew, alone | Same distance and angle as Austin's so they pair |
+| `austin-portrait.jpg` | Austin, alone | Portrait orientation, 1200×1500 or larger |
+| `andrew-portrait.jpg` | Andrew, alone | Same crop and resolution as Austin's so they pair |
 | `austin-andrew.jpg` | Both together, candid | Landscape, 16:9 friendly. Mid-conversation beats posed |
+
+Host cards are cropped 4:5 (portrait), which suits headshots. Andrew's current
+headshot is much lower resolution than Austin's; it will look soft beside his
+until a larger version is available.
 
 Per the brand photography direction: real places (office, kitchen table,
 porch), natural light, no gradient studio backdrops, no stock, no AI-generated
 people.
 
-Once the files are in place, replace the `<div class="placeholder">` blocks
-with `<img src="assets/images/austin-portrait.jpg" alt="Austin Tyler">`.
-
 ## Placeholders still to replace before launch
 
-- `(859) 555-0123` — real phone number, in every page header, footer, and body
-- `hello@joinmedicareworkshop.com` — real email
-- `Andrew [Last Name]` — Andrew's full name
+- `hello@joinmedicareworkshop.com` — real email address
 - `License #[pending]` — both license numbers, on about.html
-- `[Street address to be added]` — office address, on contact.html
+- ZIP code for the Monarch Street office, if you want it shown
 - Testimonials on index.html — real, permissioned quotes
 - Contact form on contact.html is a visual demo. Wire to GoHighLevel or an
   email endpoint before launch.
