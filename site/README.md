@@ -10,6 +10,8 @@ site/
   about.html        Story, hosts, how we get paid, four promises.
   contact.html      Phone first, what happens when you call, question form.
   free-class.html   Paid-traffic landing page for Meta ads. See below.
+  thank-you.html    Post-booking page. Fires the conversion event.
+  lp/               Four landing page directions kept for reference.
   assets/
     site.css        Canonical stylesheet (see note below)
     images/         Photos go here
@@ -110,11 +112,50 @@ Heilig, John Mello) since a partial quote cannot be verified as written, and
 Gwen Perkins, whose review mentions food at an in-person seminar and would
 mislead someone booking a webinar.
 
+## Meta Pixel and conversion tracking
+
+Pixel `27176602235306137` is installed on every page, so Meta can build
+retargeting audiences from anyone who visits, not only ad clickers.
+
+Events:
+
+| Event | Where | Meaning |
+|-------|-------|---------|
+| `PageView` | every page | baseline traffic |
+| `InitiateCheckout` | /free-class and /workshops | first interaction inside the booking widget |
+| `Schedule` + `Lead` | /thank-you | a completed booking |
+
+**The one setup step left:** in GoHighLevel, open the calendar settings and set
+the post-booking redirect to `/thank-you`. Until that is done, completed
+bookings are not counted, because the booking finishes inside a third-party
+iframe that the pixel cannot see. `InitiateCheckout` will still fire, so
+optimize toward that only until the redirect is live.
+
+Optimize campaigns for `Schedule` once bookings are flowing.
+
 ## The ad landing page (/free-class)
 
-A standalone, single-viewport page built for Meta traffic. It is not part of
-the site's navigation and deliberately has no nav links, because a landing
-page should have no exits.
+The Evening direction, chosen from four. Deep green with gold, Source Serif 4
+and Source Sans 3, the calendar embedded directly on the page so nothing gets
+typed twice. No nav links, because a landing page should have no exits.
+
+The earlier single-viewport version is in git history. The calendar embed
+means mobile scrolls; removing a click and a re-typed form was the better
+trade.
+
+### A compliance correction worth remembering
+
+The Evening draft carried the line "help you enroll only if you decide to,"
+borrowed from the reference page we took inspiration from. That page sells
+one-to-one consultations. Ours carries an educational-event disclaimer that
+says no enrollment is taken. Both cannot be true on the same page, and on a
+Medicare ad that is real exposure. The copy now says the class explains
+options and answers questions, and nothing is sold.
+
+If the GoHighLevel calendar behind this page ever books one-to-one
+appointments rather than the class, the page needs different copy AND
+different compliance language, including Scope of Appointment handling. Do not
+mix the two framings.
 
 **Everything sits above the fold on every realistic device.** That was the
 hard constraint and it drove the layout. Type scales against viewport *height*

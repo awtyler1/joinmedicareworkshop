@@ -5,6 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Free Workshops | The Medicare Workshop</title>
 <meta name="description" content="Pick a time for our free one-hour Medicare class. Live online, taught by licensed Kentucky agents. No cost, no pitch.">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '27176602235306137');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=27176602235306137&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <link rel="icon" href="/assets/icons/favicon.ico" sizes="32x32">
 <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
@@ -159,8 +176,11 @@ details p{margin:14px 0 0;font-size:19px;color:var(--walnut-soft)}
 
   // GoHighLevel posts a height message once the widget has rendered. That is
   // the real "ready" signal, so take it as soon as it arrives.
+  var engaged = false;
   window.addEventListener('message', function (e) {
-    if (typeof e.origin === 'string' && e.origin.indexOf('runonforge.us') !== -1) reveal();
+    if (typeof e.origin !== 'string' || e.origin.indexOf('runonforge.us') === -1) return;
+    reveal();
+    if (!engaged) { engaged = true; if (window.fbq) fbq('track', 'InitiateCheckout'); }
   });
 
   // If it still has not appeared, stop pretending and hand them the phone.
