@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn | The Medicare Workshop</title>
+<meta name="description" content="Plain-English guides and free workbooks about Medicare, written from the questions real Kentucky seniors ask us.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* Inlined copy of assets/site.css — edit there first, then sync. */
+:root{--font-display:'Fraunces','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--font-body:'Atkinson Hyperlegible','Gill Sans','Trebuchet MS','Segoe UI',Verdana,system-ui,sans-serif;--bluegrass:#1F4A38;--evening:#143326;--oak:#B97F24;--oak-light:#EBDDBE;--barn:#A34A2E;--linen:#F8F4EA;--linen-deep:#EDE7D6;--porch:#FFFDF8;--walnut:#2A2519;--walnut-soft:#5D553F;--container:1060px;--container-narrow:760px;--measure:64ch;--radius-md:14px;--shadow-card:0 14px 36px rgba(42,37,25,.10);--ease:cubic-bezier(.4,0,.2,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+body{margin:0;background:var(--linen);color:var(--walnut);font-family:var(--font-body);font-size:20px;line-height:1.65}
+img{max-width:100%;display:block}a{color:var(--bluegrass)}
+h1,h2,h3{font-family:var(--font-display);color:var(--evening);line-height:1.14;text-wrap:balance;font-weight:600;margin:0 0 18px}
+h1{font-size:clamp(38px,5.2vw,58px);line-height:1.1}h2{font-size:clamp(29px,3.7vw,41px)}h3{font-size:23px}
+p{max-width:var(--measure)}
+.wrap{max-width:var(--container);margin:0 auto;padding:0 26px}
+.wrap-narrow{max-width:var(--container-narrow);margin:0 auto;padding:0 26px}
+section{padding:74px 0}.tint{background:var(--linen-deep)}
+.inverse{background:var(--bluegrass);color:#E8E2D0}.inverse h2,.inverse h3{color:var(--porch)}.inverse .eyebrow{color:var(--oak-light)}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--oak);margin:0 0 13px}
+.lede{font-size:21.5px;color:var(--walnut-soft);max-width:60ch;margin:0 0 40px}.inverse .lede{color:#D6CFBC}
+.hl{background:linear-gradient(transparent 62%,var(--oak-light) 62%);padding:0 2px}
+.site-header{position:sticky;top:0;z-index:60;background:var(--porch);border-bottom:1px solid var(--linen-deep)}
+.header-inner{max-width:var(--container);margin:0 auto;padding:12px 26px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:13px;text-decoration:none;margin-right:auto}.brand svg{flex:0 0 auto}
+.brand .name{font-family:var(--font-display);font-size:20px;color:var(--evening);font-weight:600;line-height:1.15}
+.brand .name small{display:block;font-family:var(--font-body);font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--oak)}
+.site-nav{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.site-nav a{font-size:17.5px;font-weight:700;color:var(--walnut-soft);text-decoration:none;padding:6px 0;border-bottom:3px solid transparent}
+.site-nav a:hover{color:var(--bluegrass)}.site-nav a[aria-current="page"]{color:var(--evening);border-bottom-color:var(--oak)}
+.site-nav a:focus-visible,.brand:focus-visible{outline:3px solid var(--oak);outline-offset:3px}
+.header-phone{font-size:17px;font-weight:700;color:var(--porch);background:var(--bluegrass);text-decoration:none;padding:11px 20px;border-radius:999px;white-space:nowrap}
+.header-phone:hover{background:var(--evening)}
+@media(max-width:900px){.header-inner{padding:10px 20px}.site-nav{order:3;width:100%;gap:18px;padding-bottom:6px;overflow-x:auto}.site-nav a{font-size:16.5px;white-space:nowrap}}
+.btn{display:inline-block;font-family:var(--font-body);font-weight:700;font-size:21px;color:var(--porch);background:var(--bluegrass);padding:18px 36px;border-radius:10px;border:0;cursor:pointer;text-decoration:none;box-shadow:0 3px 0 var(--evening);transition:background 180ms var(--ease)}
+.btn:hover{background:var(--evening)}.btn:focus-visible{outline:3px solid var(--oak);outline-offset:3px}
+.btn-ghost{display:inline-block;font-weight:700;font-size:19px;color:var(--bluegrass);background:transparent;border:2px solid var(--bluegrass);padding:15px 30px;border-radius:10px;text-decoration:none}
+.btn-ghost:hover{background:var(--bluegrass);color:var(--porch)}
+.inverse .btn{background:var(--oak);color:var(--evening);box-shadow:0 3px 0 #8E6019}.inverse .btn:hover{background:#A97219}
+.btn-note{font-size:16.5px;color:var(--walnut-soft);margin-top:15px}.inverse .btn-note{color:#C9C1AE}
+.card{background:var(--porch);border:1px solid var(--linen-deep);border-radius:var(--radius-md);box-shadow:var(--shadow-card);padding:28px 30px}
+.card--strap{border-top:6px solid var(--oak)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:880px){.grid-3{grid-template-columns:1fr}}@media(max-width:760px){.grid-2{grid-template-columns:1fr}}
+.site-footer{background:var(--evening);color:#A79F8B;padding:54px 0 64px;font-size:15.5px;line-height:1.7}
+.site-footer a{color:#D8D1BE}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;margin-bottom:38px}
+@media(max-width:820px){.footer-top{grid-template-columns:1fr;gap:26px}}
+.site-footer .fbrand{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.site-footer .fbrand .name{font-family:var(--font-display);font-size:20px;color:var(--porch);font-weight:600}
+.site-footer h4{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--oak);margin:0 0 12px}
+.site-footer ul{list-style:none;margin:0;padding:0}.site-footer li{margin-bottom:9px}
+.legal{border-top:1px solid rgba(255,255,255,.12);padding-top:26px;font-size:14.5px}
+.legal p{max-width:92ch;margin:0 0 12px}
+/* Page-specific */
+.page-head{padding:64px 0 10px}
+.empty{background:var(--porch);border:2px dashed var(--oak);border-radius:var(--radius-md);padding:40px 44px}
+@media(max-width:640px){.empty{padding:28px 24px}}
+.empty h3{font-size:26px;margin-bottom:12px}
+.empty p{font-size:19.5px;color:var(--walnut-soft)}
+.coming{list-style:none;padding:0;margin:26px 0 0;border-top:1px solid var(--linen-deep)}
+.coming li{padding:16px 0;border-bottom:1px solid var(--linen-deep);display:flex;gap:16px;align-items:baseline}
+.coming li .q{font-family:var(--font-display);font-size:19.5px;color:var(--evening)}
+.coming li .tagx{margin-left:auto;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--oak);white-space:nowrap}
+.standard{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px}
+@media(max-width:880px){.standard{grid-template-columns:1fr}}
+.standard .s{background:var(--porch);border:1px solid var(--linen-deep);border-radius:12px;padding:24px 26px}
+.standard h4{font-family:var(--font-display);font-size:21px;color:var(--evening);margin:0 0 8px}
+.standard p{margin:0;font-size:17.5px;color:var(--walnut-soft)}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <svg width="34" height="40" viewBox="0 0 112 132" aria-hidden="true"><path d="M18 62 L42 88 L96 12" fill="none" stroke="#1F4A38" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 108 Q56 128 104 108" fill="none" stroke="#B97F24" stroke-width="9" stroke-linecap="round"/></svg>
+      <span class="name">The Medicare Workshop<small>Tyler Insurance Group</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="workshops.html">Free Workshops</a>
+      <a href="learn.html" aria-current="page">Learn</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="header-phone" href="tel:+18595550123">(859) 555-0123</a>
+  </div>
+</header>
+
+<main>
+
+<div class="page-head wrap">
+  <p class="eyebrow">Guides and workbooks</p>
+  <h1>Straight answers, written down.</h1>
+  <p class="lede">Everything here starts as a question someone actually asked us, at a workshop or on the phone. We write the answer once, carefully, so the next person doesn't have to hunt for it.</p>
+</div>
+
+<section style="padding-top:26px">
+  <div class="wrap">
+    <p class="eyebrow">Articles</p>
+    <h2>The library opens this fall.</h2>
+    <div class="empty">
+      <h3>We'd rather publish nothing than publish filler.</h3>
+      <p>There's a lot of Medicare writing on the internet. Most of it is padded, undated, and quietly trying to sell you something. We're not adding to that pile.</p>
+      <p>So the first guides are being written now, slowly, from the questions we hear most often in our own workshops. Each one gets checked against Medicare.gov, dated, signed by a licensed human, and tested on a real 70-year-old before it goes up.</p>
+      <p style="margin-bottom:0">In the meantime, the fastest way to get your question answered is to ask it out loud. Come to a free class, or just call us.</p>
+      <p style="margin-top:26px"><a class="btn" href="workshops.html">Save My Free Seat</a></p>
+    </div>
+
+    <h3 style="margin-top:50px;font-size:22px">First up, in this order</h3>
+    <p class="lede" style="margin-bottom:0">These are the questions we're asked most. Each becomes a guide.</p>
+    <ul class="coming">
+      <li><span class="q">"I'm turning 65 but I'm still working. Do I have to sign up?"</span><span class="tagx">Writing now</span></li>
+      <li><span class="q">"Why did I get 40 pieces of mail, and which ones can I throw away?"</span><span class="tagx">Next</span></li>
+      <li><span class="q">"What does Medicare actually cost me each month?"</span><span class="tagx">Queued</span></li>
+      <li><span class="q">"Advantage or Supplement? What's the honest difference?"</span><span class="tagx">Queued</span></li>
+      <li><span class="q">"What happens if I miss my enrollment window?"</span><span class="tagx">Queued</span></li>
+      <li><span class="q">"My spouse is younger than me. What happens to their coverage?"</span><span class="tagx">Queued</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <p class="eyebrow">Free workbooks</p>
+    <h2>Tools you fill in, not just things you read.</h2>
+    <div class="empty" style="background:var(--linen)">
+      <h3>The first three are in production.</h3>
+      <p>A workbook should be worth printing. Ours are being built as one-page tools you can fill in at the kitchen table and carry to a phone call: your deadline dates, your current coverage, the questions to ask before you decide anything.</p>
+      <p style="margin-bottom:0">Attendees get the first versions at our classes before they're posted here. That's not a gimmick, it's just where they're being tested.</p>
+      <p style="margin-top:26px"><a class="btn-ghost" href="workshops.html">Get them at a free class</a></p>
+    </div>
+    <div class="grid-3" style="margin-top:34px">
+      <div class="card"><h3 style="font-size:21px">Your Medicare Deadline Sheet</h3><p style="font-size:17.5px;color:var(--walnut-soft);margin:0">One page. Your birthday goes in the top box, and every date that matters fills itself in below.</p></div>
+      <div class="card"><h3 style="font-size:21px">The Mail Sorter</h3><p style="font-size:17.5px;color:var(--walnut-soft);margin:0">A simple decision tree for the pile on your counter: keep, act on, or recycle.</p></div>
+      <div class="card"><h3 style="font-size:21px">Questions to Ask Before You Decide</h3><p style="font-size:17.5px;color:var(--walnut-soft);margin:0">The list to have in hand for any call about coverage, including calls with us.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">How we decide what to publish</p>
+    <h2>Three tests, every time.</h2>
+    <p class="lede">We're putting this in public so you can hold us to it.</p>
+    <div class="standard">
+      <div class="s"><h4>True</h4><p>Every fact checked against Medicare.gov, CMS, or Social Security, with the sources listed and the date we verified it shown at the top. Numbers change yearly, so anything stale gets fixed or pulled.</p></div>
+      <div class="s"><h4>Useful</h4><p>You should be able to do something within five minutes of finishing: check a date, make a call, fill in a line. If a piece only informs, it isn't finished yet.</p></div>
+      <div class="s"><h4>Clear</h4><p>Read aloud before it publishes. One idea per sentence, no jargon, and no word we wouldn't use at a kitchen table. If it needs a glossary, we simplify until it doesn't.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="inverse">
+  <div class="wrap">
+    <p class="eyebrow">Help us pick</p>
+    <h2>What do you need explained?</h2>
+    <p class="lede">Genuinely: the guides we write come from questions people ask. If yours isn't on the list above, tell us and it goes in the queue. No email signup, no form, just ask.</p>
+    <a class="btn" href="contact.html">Send us your question</a>
+    <p class="btn-note">Or call (859) 555-0123 and ask a person directly. That works too, and it's faster.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="fbrand">
+          <svg width="30" height="35" viewBox="0 0 112 132" aria-hidden="true"><path d="M18 62 L42 88 L96 12" fill="none" stroke="#FFFDF8" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 108 Q56 128 104 108" fill="none" stroke="#B97F24" stroke-width="9" stroke-linecap="round"/></svg>
+          <span class="name">The Medicare Workshop</span>
+        </div>
+        <p style="margin:0">Free Medicare education for Kentucky seniors, taught by licensed local agents. Lexington, Kentucky.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workshops.html">Free Workshops</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Talk to a person</h4>
+        <ul>
+          <li><a href="tel:+18595550123">(859) 555-0123</a></li>
+          <li><a href="mailto:hello@joinmedicareworkshop.com">hello@joinmedicareworkshop.com</a></li>
+          <li>Monday to Friday, 9am to 5pm ET</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p>This is an educational event intended to teach about how Medicare works. No plan-specific benefits or details will be shared, and no enrollment applications will be accepted at this event.</p>
+      <p>Tyler Insurance Group is a licensed insurance agency. We are not affiliated with or endorsed by the U.S. government or the federal Medicare program. Attending creates no obligation of any kind.</p>
+      <p>For general Medicare information, visit <a href="https://www.medicare.gov">Medicare.gov</a> or call 1-800-MEDICARE (TTY 1-877-486-2048), 24 hours a day, 7 days a week.</p>
+      <p>&copy; 2026 Tyler Insurance Group. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

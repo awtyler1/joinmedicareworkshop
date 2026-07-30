@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Medicare Workshop | Free Medicare Class for Kentucky Seniors</title>
+<meta name="description" content="A free one-hour class that makes Medicare make sense. Taught in plain English by two licensed Kentucky agents. No sales pitch, no pressure, no cost.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* Inlined copy of assets/site.css — edit there first, then sync. */
+:root{--font-display:'Fraunces','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--font-body:'Atkinson Hyperlegible','Gill Sans','Trebuchet MS','Segoe UI',Verdana,system-ui,sans-serif;--bluegrass:#1F4A38;--evening:#143326;--oak:#B97F24;--oak-light:#EBDDBE;--barn:#A34A2E;--linen:#F8F4EA;--linen-deep:#EDE7D6;--porch:#FFFDF8;--walnut:#2A2519;--walnut-soft:#5D553F;--container:1060px;--container-narrow:760px;--measure:64ch;--radius-md:14px;--shadow-card:0 14px 36px rgba(42,37,25,.10);--ease:cubic-bezier(.4,0,.2,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+body{margin:0;background:var(--linen);color:var(--walnut);font-family:var(--font-body);font-size:20px;line-height:1.65}
+img{max-width:100%;display:block}a{color:var(--bluegrass)}
+h1,h2,h3{font-family:var(--font-display);color:var(--evening);line-height:1.14;text-wrap:balance;font-weight:600;margin:0 0 18px}
+h1{font-size:clamp(38px,5.2vw,58px);line-height:1.1}h2{font-size:clamp(29px,3.7vw,41px)}h3{font-size:23px}
+p{max-width:var(--measure)}
+.wrap{max-width:var(--container);margin:0 auto;padding:0 26px}
+.wrap-narrow{max-width:var(--container-narrow);margin:0 auto;padding:0 26px}
+section{padding:74px 0}.tint{background:var(--linen-deep)}
+.inverse{background:var(--bluegrass);color:#E8E2D0}.inverse h2,.inverse h3{color:var(--porch)}.inverse .eyebrow{color:var(--oak-light)}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--oak);margin:0 0 13px}
+.lede{font-size:21.5px;color:var(--walnut-soft);max-width:60ch;margin:0 0 40px}.inverse .lede{color:#D6CFBC}
+.hl{background:linear-gradient(transparent 62%,var(--oak-light) 62%);padding:0 2px}
+.site-header{position:sticky;top:0;z-index:60;background:var(--porch);border-bottom:1px solid var(--linen-deep)}
+.header-inner{max-width:var(--container);margin:0 auto;padding:12px 26px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:13px;text-decoration:none;margin-right:auto}.brand svg{flex:0 0 auto}
+.brand .name{font-family:var(--font-display);font-size:20px;color:var(--evening);font-weight:600;line-height:1.15}
+.brand .name small{display:block;font-family:var(--font-body);font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--oak)}
+.site-nav{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.site-nav a{font-size:17.5px;font-weight:700;color:var(--walnut-soft);text-decoration:none;padding:6px 0;border-bottom:3px solid transparent}
+.site-nav a:hover{color:var(--bluegrass)}.site-nav a[aria-current="page"]{color:var(--evening);border-bottom-color:var(--oak)}
+.site-nav a:focus-visible,.brand:focus-visible{outline:3px solid var(--oak);outline-offset:3px}
+.header-phone{font-size:17px;font-weight:700;color:var(--porch);background:var(--bluegrass);text-decoration:none;padding:11px 20px;border-radius:999px;white-space:nowrap}
+.header-phone:hover{background:var(--evening)}
+@media(max-width:900px){.header-inner{padding:10px 20px}.site-nav{order:3;width:100%;gap:18px;padding-bottom:6px;overflow-x:auto}.site-nav a{font-size:16.5px;white-space:nowrap}}
+.btn{display:inline-block;font-family:var(--font-body);font-weight:700;font-size:21px;color:var(--porch);background:var(--bluegrass);padding:18px 36px;border-radius:10px;border:0;cursor:pointer;text-decoration:none;box-shadow:0 3px 0 var(--evening);transition:background 180ms var(--ease)}
+.btn:hover{background:var(--evening)}.btn:focus-visible{outline:3px solid var(--oak);outline-offset:3px}
+.btn-ghost{display:inline-block;font-weight:700;font-size:19px;color:var(--bluegrass);background:transparent;border:2px solid var(--bluegrass);padding:15px 30px;border-radius:10px;text-decoration:none}
+.btn-ghost:hover{background:var(--bluegrass);color:var(--porch)}
+.inverse .btn{background:var(--oak);color:var(--evening);box-shadow:0 3px 0 #8E6019}.inverse .btn:hover{background:#A97219}
+.btn-note{font-size:16.5px;color:var(--walnut-soft);margin-top:15px}.inverse .btn-note{color:#C9C1AE}
+.card{background:var(--porch);border:1px solid var(--linen-deep);border-radius:var(--radius-md);box-shadow:var(--shadow-card);padding:28px 30px}
+.card--strap{border-top:6px solid var(--oak)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:880px){.grid-3{grid-template-columns:1fr}}@media(max-width:760px){.grid-2{grid-template-columns:1fr}}
+.hosts{display:grid;grid-template-columns:1fr 1fr;gap:30px}@media(max-width:760px){.hosts{grid-template-columns:1fr}}
+.host{background:var(--porch);border:1px solid var(--linen-deep);border-radius:var(--radius-md);overflow:hidden}
+.host .portrait{aspect-ratio:4/3;background:var(--linen-deep);position:relative}
+.host .portrait img{width:100%;height:100%;object-fit:cover}
+.host .portrait .placeholder{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:18px;font-size:14.5px;font-weight:700;color:var(--walnut-soft);background:repeating-linear-gradient(45deg,var(--linen-deep),var(--linen-deep) 14px,var(--linen) 14px,var(--linen) 28px)}
+.host .body{padding:26px 28px 30px}.host h3{margin:0 0 4px;font-size:24px}
+.host .role{font-size:14.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--oak);margin:0 0 14px}
+.host p{margin:0 0 14px;font-size:18.5px;color:var(--walnut-soft)}
+details{background:var(--porch);border:1px solid var(--linen-deep);border-radius:12px;padding:22px 26px;margin-bottom:14px}
+details summary{font-family:var(--font-display);font-size:21px;font-weight:600;color:var(--evening);cursor:pointer}
+details summary:focus-visible{outline:3px solid var(--oak);outline-offset:2px}
+details p{margin:14px 0 0;font-size:19px;color:var(--walnut-soft)}
+.site-footer{background:var(--evening);color:#A79F8B;padding:54px 0 64px;font-size:15.5px;line-height:1.7}
+.site-footer a{color:#D8D1BE}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;margin-bottom:38px}
+@media(max-width:820px){.footer-top{grid-template-columns:1fr;gap:26px}}
+.site-footer .fbrand{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.site-footer .fbrand .name{font-family:var(--font-display);font-size:20px;color:var(--porch);font-weight:600}
+.site-footer h4{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--oak);margin:0 0 12px}
+.site-footer ul{list-style:none;margin:0;padding:0}.site-footer li{margin-bottom:9px}
+.legal{border-top:1px solid rgba(255,255,255,.12);padding-top:26px;font-size:14.5px}
+.legal p{max-width:92ch;margin:0 0 12px}
+/* Page-specific */
+.hero{padding:78px 0 60px}
+.hero .wink{font-size:23px;color:var(--walnut-soft);margin:20px 0 32px;max-width:44ch}
+.hero .wink strong{color:var(--walnut)}
+.stack{background:var(--porch);border:1px solid var(--linen-deep);border-top:6px solid var(--oak);border-radius:var(--radius-md);margin-top:46px;box-shadow:var(--shadow-card);overflow:hidden;max-width:820px}
+.stack .head{padding:24px 30px 8px}.stack .head h3{margin:0;font-size:24px}
+.stack .row{display:flex;justify-content:space-between;gap:20px;align-items:baseline;padding:18px 30px}
+.stack .row+.row{border-top:1px solid var(--linen-deep)}
+.stack .row .what{font-size:20px}
+.stack .row .what small{display:block;font-size:15.5px;color:var(--walnut-soft);margin-top:4px}
+.stack .row .worth{font-weight:700;font-size:17px;color:var(--walnut-soft);white-space:nowrap;font-variant-numeric:tabular-nums}
+.stack .total{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:22px 30px;background:var(--linen);border-top:2px solid var(--oak);font-weight:700;font-size:20px}
+.stack .total .strike{text-decoration:line-through;text-decoration-color:var(--barn);text-decoration-thickness:3px;color:var(--walnut-soft);margin-right:12px}
+.stack .total .free{background:var(--oak);color:var(--porch);padding:4px 16px;border-radius:8px;font-size:22px}
+.truths{counter-reset:t;list-style:none;padding:0;margin:44px 0 0}
+.truths li{counter-increment:t;display:flex;gap:24px;padding:28px 0;border-top:1px solid var(--linen-deep)}
+.truths li:first-child{border-top:2px solid var(--bluegrass)}
+.truths li::before{content:counter(t);flex:0 0 52px;height:52px;border-radius:50%;background:var(--bluegrass);color:var(--linen);font-weight:700;font-size:24px;display:grid;place-items:center}
+.truths h3{margin:4px 0 8px}.truths p{margin:0;font-size:19px;color:var(--walnut-soft)}
+.promise{background:var(--porch);color:var(--walnut);border-radius:var(--radius-md);padding:42px 46px;margin-top:44px;position:relative;box-shadow:0 18px 44px rgba(20,51,38,.28)}
+@media(max-width:640px){.promise{padding:32px 26px}}
+.promise .seal{position:absolute;top:-30px;right:34px;width:84px;height:84px;border-radius:50%;background:var(--barn);color:var(--porch);display:grid;place-items:center;text-align:center;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;line-height:1.3;transform:rotate(6deg);padding:8px}
+.promise h3{font-size:27px;margin:0 0 14px}.promise p{font-size:20.5px;margin:0}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+@media(max-width:880px){.quotes{grid-template-columns:1fr}}
+.quote{background:var(--porch);border:1px solid var(--linen-deep);border-radius:12px;padding:28px}
+.quote p{margin:0 0 16px;font-family:var(--font-display);font-size:19px;line-height:1.6}
+.quote p::before{content:"\201C";color:var(--oak);font-size:34px;line-height:0;vertical-align:-8px;margin-right:4px}
+.quote cite{font-style:normal;font-size:15px;font-weight:700;color:var(--walnut-soft)}
+.final{text-align:center}.final h2{margin:0 auto 16px;max-width:26ch}
+.final p{font-size:21px;color:var(--walnut-soft);max-width:52ch;margin:0 auto 32px}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <svg width="34" height="40" viewBox="0 0 112 132" aria-hidden="true"><path d="M18 62 L42 88 L96 12" fill="none" stroke="#1F4A38" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 108 Q56 128 104 108" fill="none" stroke="#B97F24" stroke-width="9" stroke-linecap="round"/></svg>
+      <span class="name">The Medicare Workshop<small>Tyler Insurance Group</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="workshops.html">Free Workshops</a>
+      <a href="learn.html">Learn</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="header-phone" href="tel:+18595550123">(859) 555-0123</a>
+  </div>
+</header>
+
+<main>
+
+<div class="hero wrap">
+  <p class="eyebrow">Free live class for Kentucky seniors</p>
+  <h1>Understand Medicare in one hour, or we'll refund <span class="hl">every penny.</span></h1>
+  <p class="wink"><strong>It's free. There are no pennies.</strong> But that's how confident we are: one plain-English hour, and you'll finally know exactly what to do, and what it could cost you to wait.</p>
+  <a class="btn" href="workshops.html">Save My Free Seat</a>
+  <p class="btn-note">Takes 30 seconds. No pitch, no pressure. And a real person in Lexington answers if you'd rather call.</p>
+
+  <div class="stack">
+    <div class="head"><h3>Everything you get when you save a seat:</h3></div>
+    <div class="row"><div class="what">The 60-minute Medicare Made Simple class, live<small>Parts A, B, C and D, decoded in plain English with real examples</small></div><div class="worth">$197 value</div></div>
+    <div class="row"><div class="what">Your enrollment deadline cheat sheet<small>The dates that trigger lifetime penalties if you miss them</small></div><div class="worth">$49 value</div></div>
+    <div class="row"><div class="what">The 5 Costly Medicare Mistakes guide<small>The exact traps we've watched Kentucky families fall into</small></div><div class="worth">$49 value</div></div>
+    <div class="row"><div class="what">Live Q&amp;A: we stay until your questions are done<small>Ask anything, especially the ones you think are "dumb." They aren't.</small></div><div class="worth">The best part</div></div>
+    <div class="total"><span>Total value:</span><span><span class="strike">$295+</span><span class="free">Free</span></span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Let's be honest</p>
+    <h2>Medicare isn't hard because you can't understand it. It's hard because everyone explaining it is selling something.</h2>
+    <p class="lede">The average person turning 65 gets buried under dozens of mailers, robocalls, and TV ads, every single one from someone with an agenda. So we took everything we explain to clients one-on-one, cut every word of jargon, and packed it into one free hour. Here's what that hour covers:</p>
+    <ol class="truths">
+      <li><div><h3>The four parts, decoded</h3><p>What A, B, C, and D actually do, with examples from real life instead of a government pamphlet.</p></div></li>
+      <li><div><h3>The deadlines with teeth</h3><p>Certain enrollment windows close and never reopen without a penalty, one you pay for the rest of your life. You'll leave knowing your exact dates.</p></div></li>
+      <li><div><h3>Advantage and Supplement, no spin</h3><p>The honest trade-offs on your doctors, your travel, and your total cost. The comparison the TV commercials aren't designed to give you.</p></div></li>
+      <li><div><h3>The five expensive mistakes</h3><p>Each one avoidable in minutes if someone shows you. Someone's about to show you.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="inverse">
+  <div class="wrap">
+    <p class="eyebrow">The question you should ask</p>
+    <h2>"Okay, so what's the catch?"</h2>
+    <p class="lede">Smart question. You deserve the whole answer, out loud.</p>
+    <p style="font-size:21px;line-height:1.7;margin:0 0 22px">We're licensed Medicare agents here in Lexington. After the class, some folks ask us for one-on-one help. When we help someone find coverage, the insurance company pays us a commission. <strong style="color:#FFFDF8">You never pay us anything, and your price is identical with or without us.</strong></p>
+    <p style="font-size:21px;line-height:1.7;margin:0">Most attendees never become clients, and that's genuinely fine. We'd rather be useful to a thousand neighbors and earn the trust of a hundred than pressure anyone. That's the entire catch. There isn't one.</p>
+    <div class="promise">
+      <div class="seal">Our<br>Promise</div>
+      <h3>The No-Pitch Promise</h3>
+      <p>This is an educational class. No specific plans discussed, no enrollment forms, no follow-up calls unless <em>you</em> ask for one. If you ever feel even slightly sold to, leave. Then tell your neighbors we wasted your hour. That's what keeps us honest.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Meet your hosts</p>
+    <h2>Two actual humans. Your neighbors, in fact.</h2>
+    <p class="lede">Not a call center. Not an 800 number ringing in another state. Two guys from Lexington who do this every day, and they'll be the ones on your screen.</p>
+    <div class="hosts">
+      <div class="host">
+        <div class="portrait"><div class="placeholder">PHOTO PENDING<br>site/assets/images/austin-portrait.jpg</div></div>
+        <div class="body">
+          <h3>Austin Tyler</h3>
+          <p class="role">Founder, Tyler Insurance Group</p>
+          <p>Austin started Tyler Insurance Group after watching his own family struggle through Medicare paperwork. His standard for every class: if his grandmother wouldn't understand it, it doesn't get said that way.</p>
+        </div>
+      </div>
+      <div class="host">
+        <div class="portrait"><div class="placeholder">PHOTO PENDING<br>site/assets/images/andrew-portrait.jpg</div></div>
+        <div class="body">
+          <h3>Andrew [Last Name]</h3>
+          <p class="role">Co-Host, Licensed Agent</p>
+          <p>Andrew has walked hundreds of Kentuckians through their first Medicare decisions. He runs the Q&amp;A and refuses to end it while a hand is still raised.</p>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:26px"><a class="btn-ghost" href="about.html">Read our story</a></p>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <p class="eyebrow">From folks like you</p>
+    <h2>What neighbors are saying</h2>
+    <div class="quotes">
+      <div class="quote"><p>I'd been drowning in mailers for months. One hour with these two and I finally understood my options.</p><cite>Linda R., Lexington</cite></div>
+      <div class="quote"><p>No pressure, no pitch. They answered every question, including the ones I was embarrassed to ask.</p><cite>James and Carol T., Georgetown</cite></div>
+      <div class="quote"><p>My daughter signed me up. Easiest thing I've done on a computer all year.</p><cite>Dorothy M., Nicholasville</cite></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap-narrow">
+    <p class="eyebrow">Still on the fence? Fair.</p>
+    <h2>The questions people ask first</h2>
+    <details open><summary>Is it really free?</summary><p>Really free. Insurance companies pay agents like us, never you, and your prices are the same either way. The class is education only, always.</p></details>
+    <details><summary>Will you call me afterward?</summary><p>Only if you ask us to. That's the No-Pitch Promise, and our whole reputation in this town rides on keeping it.</p></details>
+    <details><summary>I'm not great with computers.</summary><p>If you can click a link in an email, you're qualified. Stuck? Call us and we'll walk you through it, or just join by phone.</p></details>
+    <details><summary>I'm not 65 yet.</summary><p>Even better. The expensive mistakes come from starting late, not early. Within a year of 65 is the perfect time.</p></details>
+  </div>
+</section>
+
+<section class="tint final">
+  <div class="wrap">
+    <h2>An hour of your time. Thousands in mistakes avoided.</h2>
+    <p>Saying no means betting you'll figure out Medicare alone, faster, from the mailers. You won't. Nobody does. Grab a seat instead.</p>
+    <a class="btn" href="workshops.html">Save My Free Seat</a>
+    <p class="btn-note">Or call (859) 555-0123. We'd love to hear from you.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="fbrand">
+          <svg width="30" height="35" viewBox="0 0 112 132" aria-hidden="true"><path d="M18 62 L42 88 L96 12" fill="none" stroke="#FFFDF8" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 108 Q56 128 104 108" fill="none" stroke="#B97F24" stroke-width="9" stroke-linecap="round"/></svg>
+          <span class="name">The Medicare Workshop</span>
+        </div>
+        <p style="margin:0">Free Medicare education for Kentucky seniors, taught by licensed local agents. Lexington, Kentucky.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workshops.html">Free Workshops</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Talk to a person</h4>
+        <ul>
+          <li><a href="tel:+18595550123">(859) 555-0123</a></li>
+          <li><a href="mailto:hello@joinmedicareworkshop.com">hello@joinmedicareworkshop.com</a></li>
+          <li>Monday to Friday, 9am to 5pm ET</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p>This is an educational event intended to teach about how Medicare works. No plan-specific benefits or details will be shared, and no enrollment applications will be accepted at this event.</p>
+      <p>Tyler Insurance Group is a licensed insurance agency. We are not affiliated with or endorsed by the U.S. government or the federal Medicare program. Attending creates no obligation of any kind.</p>
+      <p>For general Medicare information, visit <a href="https://www.medicare.gov">Medicare.gov</a> or call 1-800-MEDICARE (TTY 1-877-486-2048), 24 hours a day, 7 days a week.</p>
+      <p>&copy; 2026 Tyler Insurance Group. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
