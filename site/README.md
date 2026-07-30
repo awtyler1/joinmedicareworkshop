@@ -54,13 +54,26 @@ people.
 
 - `License #[pending]` — license number, on about.html
 - ZIP code for the Monarch Street office, if you want it shown
-- TWO Google links are needed. The read link (Business Profile / Maps place
-  URL) replaces the Maps search placeholder in the reviews block on
-  index.html and the "Google page" link on workshops.html. The write link
-  (`g.page/r/.../review`) is not for the site; it is for post-workshop
-  follow-up emails and texts.
-- Confirm the exact review count and star rating before either is stated on
-  the page. The copy currently says "nearly 70" and claims no rating.
+- The star rating is deliberately not stated anywhere. Every review seen so
+  far is five stars, but the aggregate Google displays has not been confirmed,
+  and an unverified rating is not worth the risk. Confirm it and it can go in.
+- The write-a-review link (`g.page/r/.../review`) is still needed. It does NOT
+  go on the site; it goes in post-workshop follow-up emails and texts. Get it
+  from Google Business Profile under "Ask for reviews."
+
+## The review count
+
+The site states **68**, hardcoded in two places: the `.rev-num` figure and the
+headline on index.html, and the closing line on workshops.html.
+
+Specific beats rounded here. "68" reads as a number someone actually looked
+up; "65+" reads as marketing hedging, and the voice rules call for specific
+numbers. The count also only realistically moves up, so a stale figure
+understates rather than overstates, and a visitor who clicks through to find
+more than we claimed trusts us more, not less.
+
+Refresh it quarterly, or any time it has drifted far enough to be worth the
+edit. If it ever drops below what the page claims, fix it that day.
 - Contact form on contact.html is a visual demo. Wire to GoHighLevel or an
   email endpoint before launch.
 
