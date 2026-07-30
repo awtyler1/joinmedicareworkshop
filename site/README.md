@@ -9,6 +9,7 @@ site/
   learn.html        Articles and workbooks. Empty for now, honestly so.
   about.html        Story, hosts, how we get paid, four promises.
   contact.html      Phone first, what happens when you call, question form.
+  free-class.html   Paid-traffic landing page for Meta ads. See below.
   assets/
     site.css        Canonical stylesheet (see note below)
     images/         Photos go here
@@ -108,6 +109,43 @@ Hopewell), reviews truncated by Google's "View full review" (Brenda Ball
 Heilig, John Mello) since a partial quote cannot be verified as written, and
 Gwen Perkins, whose review mentions food at an in-person seminar and would
 mislead someone booking a webinar.
+
+## The ad landing page (/free-class)
+
+A standalone, single-viewport page built for Meta traffic. It is not part of
+the site's navigation and deliberately has no nav links, because a landing
+page should have no exits.
+
+**Everything sits above the fold on every realistic device.** That was the
+hard constraint and it drove the layout. Type scales against viewport *height*
+as well as width (`clamp(30px, min(6.1vw, 7.2vh), 70px)`), so a short screen
+shrinks the headline rather than pushing the button out of view. Verified at
+375x667, 360x800, 390x844, 430x932, 768x1024, 1366x768, 1920x1080.
+
+Phones drop the review quotes and the three-step row. They are worth having on
+desktop, but on a phone they push the CTA below the fold, which costs more than
+they add. The proof that survives on mobile is the photo, the pull quote, and
+the three stats.
+
+Below 600px of height (landscape phones, very old devices) the page is allowed
+to scroll. Clipping content a senior cannot reach would be worse than scrolling.
+
+**Two-step opt-in.** The CTA opens a modal rather than putting a form on the
+fold. The click is a micro-commitment that tends to lift completion, and it
+frees the vertical space the headline and proof need.
+
+**The handoff.** On submit the form redirects to the GoHighLevel booking widget
+with `first_name`, `last_name`, `email`, and `phone` prefilled, and carries any
+`utm_*` and `fbclid` parameters through so each market and campaign can be
+measured. Verify the prefill parameter names against your GHL calendar setup.
+
+**Before running traffic:**
+- Paste the Meta Pixel base code into the marked slot in `<head>`. The page
+  already fires `fbq('track','InitiateCheckout')` on CTA click and
+  `fbq('track','Lead')` on submit if `fbq` exists.
+- Optionally POST to a GHL webhook on submit as well, so a lead who abandons at
+  the calendar step is still captured. Marked with a TODO in the script.
+- The page is `noindex` on purpose so it does not compete with the main site.
 
 ## Icons
 

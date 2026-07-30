@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Free Medicare Class | Get Medicare Right the First Time</title>
+<meta name="description" content="One free hour with the Lexington agent who has walked over 1,000 Kentuckians through Medicare. Plain English, every question answered, nothing sold.">
+<meta name="robots" content="noindex,follow">
+<link rel="icon" href="/assets/icons/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<meta name="theme-color" content="#F8F4EA">
+<link rel="preconnect" href="https://link.runonforge.us" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- META PIXEL: paste your pixel base code here before launch. The CTA already
+     fires fbq('track','Lead') on submit if fbq exists. -->
+
+<style>
+:root{
+  --font-display:'Fraunces','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;
+  --font-body:'Atkinson Hyperlegible','Gill Sans','Trebuchet MS','Segoe UI',Verdana,system-ui,sans-serif;
+  --bluegrass:#1F4A38;--evening:#143326;--oak:#B97F24;--oak-light:#EBDDBE;--barn:#A34A2E;
+  --linen:#F8F4EA;--linen-deep:#EDE7D6;--porch:#FFFDF8;--walnut:#2A2519;--walnut-soft:#5D553F;
+  --ease:cubic-bezier(.4,0,.2,1);
+  /* Type scales against BOTH width and height so a short screen shrinks it too.
+     This is what makes a true no-scroll fold possible across devices. */
+  --h1:clamp(30px, min(6.1vw, 7.2vh), 70px);
+  --sub:clamp(16.5px, min(2.05vw, 2.35vh), 23px);
+  --body:clamp(15px, min(1.5vw, 1.85vh), 18.5px);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;background:var(--linen);color:var(--walnut);
+  font-family:var(--font-body);line-height:1.5;
+  -webkit-text-size-adjust:100%;
+}
+a{color:var(--bluegrass)}
+img{max-width:100%;display:block}
+
+/* The fold. 100dvh accounts for mobile browser chrome. */
+.fold{
+  min-height:100dvh;min-height:100vh;
+  display:flex;flex-direction:column;
+  padding:clamp(10px,1.6vh,20px) clamp(16px,3vw,34px) clamp(8px,1.2vh,16px);
+  max-width:1240px;margin:0 auto;
+}
+
+/* --- top bar: brand + phone. No nav: a landing page has no exits. --- */
+.top{display:flex;align-items:center;justify-content:space-between;gap:14px;flex:0 0 auto}
+.brandmark{display:flex;align-items:center;gap:10px}
+.brandmark svg{flex:0 0 auto;width:clamp(24px,3vh,32px);height:auto}
+.brandmark .bn{font-family:var(--font-display);font-weight:600;font-size:clamp(15px,1.9vh,19px);color:var(--evening);line-height:1.1}
+.brandmark .bn small{display:block;font-family:var(--font-body);font-weight:700;font-size:clamp(9.5px,1.15vh,11.5px);letter-spacing:.1em;text-transform:uppercase;color:var(--oak);margin-top:2px}
+.topcall{
+  font-weight:700;font-size:clamp(14px,1.8vh,17px);color:var(--porch);background:var(--bluegrass);
+  text-decoration:none;padding:clamp(7px,1vh,11px) clamp(13px,1.6vw,20px);border-radius:999px;white-space:nowrap;
+}
+.topcall:hover{background:var(--evening)}
+.topcall:focus-visible{outline:3px solid var(--oak);outline-offset:2px}
+
+/* --- main grid --- */
+.grid{
+  flex:1 1 auto;display:grid;grid-template-columns:1.12fr .88fr;
+  gap:clamp(18px,3vw,52px);align-items:center;
+  padding:clamp(8px,1.6vh,26px) 0;min-height:0;
+}
+@media (max-width:900px){ .grid{grid-template-columns:1fr;gap:clamp(12px,2vh,20px)} }
+
+.eyebrow{
+  font-weight:700;font-size:clamp(11.5px,1.45vh,14px);letter-spacing:.13em;text-transform:uppercase;
+  color:var(--oak);margin:0 0 clamp(8px,1.2vh,14px);
+}
+h1{
+  font-family:var(--font-display);font-weight:700;font-size:var(--h1);line-height:1.03;
+  letter-spacing:-.015em;color:var(--evening);margin:0 0 clamp(10px,1.5vh,18px);
+  text-wrap:balance;
+}
+h1 .hl{background:linear-gradient(transparent 60%,var(--oak-light) 60%);padding:0 3px}
+.sub{
+  font-size:var(--sub);line-height:1.42;color:var(--walnut-soft);
+  margin:0 0 clamp(14px,2vh,24px);max-width:34ch;
+}
+.sub b{color:var(--walnut)}
+
+.cta{
+  display:block;width:100%;max-width:460px;text-align:center;
+  font-family:var(--font-body);font-weight:700;
+  font-size:clamp(18px,2.5vh,25px);color:var(--porch);background:var(--bluegrass);
+  padding:clamp(13px,2.1vh,21px) clamp(20px,3vw,34px);
+  border:0;border-radius:12px;cursor:pointer;text-decoration:none;
+  box-shadow:0 4px 0 var(--evening),0 10px 24px rgba(20,51,38,.20);
+  transition:background 160ms var(--ease),transform 120ms var(--ease);
+}
+.cta:hover{background:var(--evening)}
+.cta:active{transform:translateY(2px);box-shadow:0 2px 0 var(--evening)}
+.cta:focus-visible{outline:3px solid var(--oak);outline-offset:3px}
+
+/* risk reversal, directly beneath the button */
+.reassure{
+  display:flex;flex-wrap:wrap;gap:clamp(4px,.8vw,10px) clamp(10px,1.6vw,20px);
+  margin:clamp(9px,1.4vh,14px) 0 0;max-width:460px;
+  font-size:clamp(12.5px,1.55vh,15.5px);font-weight:700;color:var(--walnut-soft);
+}
+.reassure span{display:flex;align-items:center;gap:5px;white-space:nowrap}
+.reassure span::before{content:"✓";color:var(--bluegrass);font-weight:700}
+.orcall{
+  margin:clamp(8px,1.2vh,13px) 0 0;font-size:clamp(13px,1.65vh,16.5px);color:var(--walnut-soft);
+}
+.orcall a{font-weight:700;white-space:nowrap}
+
+/* --- proof column --- */
+.proof{display:flex;flex-direction:column;gap:clamp(10px,1.5vh,16px);min-width:0}
+.proofcard{
+  background:var(--porch);border:1px solid var(--linen-deep);border-top:5px solid var(--oak);
+  border-radius:14px;box-shadow:0 12px 30px rgba(42,37,25,.10);
+  padding:clamp(12px,1.8vh,20px) clamp(14px,1.6vw,22px);
+}
+.who{display:flex;align-items:center;gap:clamp(11px,1.4vw,16px)}
+.who .shot{
+  flex:0 0 auto;width:clamp(62px,9.5vh,104px);aspect-ratio:4/5;border-radius:10px;
+  overflow:hidden;background:var(--linen-deep);position:relative;
+}
+.who .shot img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.who .said{min-width:0}
+.who .said p{
+  margin:0 0 6px;font-family:var(--font-display);font-size:clamp(14.5px,1.85vh,19px);
+  line-height:1.35;color:var(--walnut);
+}
+.who .said cite{font-style:normal;font-weight:700;font-size:clamp(11.5px,1.4vh,14px);color:var(--walnut-soft)}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(6px,1vw,14px);text-align:center}
+.stat{min-width:0}
+.stat .n{
+  font-family:var(--font-display);font-weight:700;font-size:clamp(21px,3.4vh,36px);
+  line-height:1;color:var(--bluegrass);font-variant-numeric:tabular-nums;
+}
+.stat .l{
+  font-size:clamp(10.5px,1.3vh,13px);font-weight:700;color:var(--walnut-soft);
+  line-height:1.25;margin-top:5px;
+}
+
+.quotes{display:flex;flex-direction:column;gap:clamp(7px,1.1vh,12px)}
+.q{
+  background:var(--porch);border:1px solid var(--linen-deep);border-radius:11px;
+  padding:clamp(10px,1.4vh,15px) clamp(12px,1.4vw,18px);
+}
+.q .st{color:var(--oak);letter-spacing:2px;font-size:clamp(10px,1.2vh,12.5px);margin-bottom:4px}
+.q p{margin:0 0 5px;font-family:var(--font-display);font-size:clamp(13px,1.6vh,16.5px);line-height:1.35}
+.q cite{font-style:normal;font-weight:700;font-size:clamp(10.5px,1.25vh,12.5px);color:var(--walnut-soft)}
+
+/* --- how it works: 3 steps, effort reduction --- */
+.steps{
+  display:flex;flex-wrap:wrap;gap:clamp(6px,1.2vw,18px);align-items:center;
+  font-size:clamp(12px,1.5vh,15.5px);font-weight:700;color:var(--walnut-soft);
+  margin:clamp(10px,1.5vh,16px) 0 0;
+}
+.steps b{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:clamp(19px,2.4vh,25px);height:clamp(19px,2.4vh,25px);border-radius:50%;
+  background:var(--bluegrass);color:var(--linen);font-size:clamp(11px,1.35vh,14px);margin-right:6px;
+}
+.steps span{display:flex;align-items:center}
+
+/* --- compliance, required and deliberately kept small --- */
+.legal{
+  flex:0 0 auto;font-size:clamp(9.5px,1.12vh,11.5px);line-height:1.4;color:var(--walnut-soft);
+  text-align:center;opacity:.85;padding-top:clamp(6px,.9vh,10px);border-top:1px solid var(--linen-deep);
+}
+.legal a{color:var(--walnut-soft)}
+
+/* --- modal --- */
+.scrim{
+  position:fixed;inset:0;background:rgba(20,51,38,.55);backdrop-filter:blur(2px);
+  display:none;place-items:center;padding:16px;z-index:100;
+}
+.scrim.open{display:grid}
+.modal{
+  background:var(--porch);border-radius:16px;width:min(520px,100%);
+  max-height:min(92dvh,760px);overflow-y:auto;
+  padding:clamp(20px,3.4vh,34px) clamp(18px,3.4vw,34px);
+  box-shadow:0 26px 70px rgba(20,51,38,.4);
+}
+.modal h2{
+  font-family:var(--font-display);font-weight:700;font-size:clamp(22px,3.2vh,30px);
+  color:var(--evening);margin:0 0 6px;line-height:1.15;
+}
+.modal .mp{font-size:clamp(14px,1.75vh,17.5px);color:var(--walnut-soft);margin:0 0 clamp(12px,2vh,20px)}
+.modal label{display:block;font-size:clamp(12px,1.5vh,14.5px);font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--walnut-soft);margin:clamp(10px,1.6vh,16px) 0 6px}
+.modal input{
+  width:100%;font-family:var(--font-body);font-size:clamp(16px,2vh,19px);
+  padding:clamp(11px,1.6vh,15px) 14px;border:2px solid var(--linen-deep);border-radius:9px;
+  background:var(--linen);color:var(--walnut);
+}
+.modal input:focus{outline:3px solid var(--oak);outline-offset:1px;border-color:var(--oak)}
+.modal .cta{margin-top:clamp(14px,2.2vh,22px);max-width:none}
+.modal .fine{font-size:clamp(11.5px,1.4vh,14px);color:var(--walnut-soft);margin:clamp(10px,1.4vh,14px) 0 0;line-height:1.5}
+.modal .close{
+  float:right;background:none;border:0;font-size:26px;line-height:1;color:var(--walnut-soft);
+  cursor:pointer;padding:2px 6px;margin:-6px -6px 0 0;
+}
+.modal .close:focus-visible{outline:3px solid var(--oak)}
+
+/* Short screens (landscape phones, small laptops): let it scroll rather than
+   clipping content. Never trap a senior on a page they cannot finish reading. */
+@media (max-height:600px){
+  html,body{height:auto}
+  .fold{min-height:0}
+}
+
+/* --- PHONES ---
+   The stacked layout is inherently tall, so mobile drops to the four things
+   that actually convert: headline, subhead, CTA with its risk reversal, and a
+   single compact proof strip. Review quotes and the step row are a desktop
+   luxury; on a phone they push the button below the fold, which costs far
+   more than they add. */
+@media (max-width:900px){
+  .sub{max-width:none;margin-bottom:clamp(12px,1.8vh,18px)}
+  .cta,.reassure{max-width:none}
+  .quotes{display:none}
+  .steps{display:none}
+  .grid{padding:clamp(6px,1.2vh,14px) 0;gap:clamp(10px,1.6vh,16px);align-items:start}
+  .proof{gap:clamp(8px,1.2vh,12px)}
+  .proofcard{padding:clamp(10px,1.4vh,14px) clamp(12px,3vw,16px);border-top-width:4px}
+  .who .shot{width:clamp(54px,7.4vh,72px)}
+  .who .said p{font-size:clamp(13.5px,1.72vh,16px)}
+  /* Stats collapse to one line of text: same proof, a third of the height. */
+  .stats{display:flex;justify-content:space-between;gap:8px;text-align:center}
+  .stat .n{font-size:clamp(18px,2.6vh,24px)}
+  .stat .l{font-size:clamp(10px,1.2vh,11.5px);margin-top:3px}
+  .orcall{margin-top:clamp(6px,1vh,10px)}
+  .legal{font-size:clamp(9px,1.05vh,10.5px)}
+  .wide{display:none}
+  .eyebrow{margin-bottom:clamp(5px,.8vh,9px);letter-spacing:.09em;font-size:clamp(11px,1.35vh,12.5px)}
+  .brandmark .bn{font-size:clamp(13.5px,1.7vh,16px);line-height:1.15}
+  .brandmark .bn small{display:none}
+  h1{margin-bottom:clamp(8px,1.2vh,14px)}
+  .who .said p{font-size:clamp(13px,1.62vh,15px)}
+  .who .said cite{font-size:clamp(10.5px,1.3vh,12px)}
+}
+/* Small older phones (iPhone SE class) are common in this audience and are the
+   tightest real case. Squeeze structure, never the type. */
+@media (max-width:900px) and (max-height:700px){
+  .grid{padding:4px 0;gap:9px}
+  .proof{gap:8px}
+  .proofcard{padding:9px 12px}
+  .who{gap:11px}
+  .who .shot{width:50px}
+  .reassure{gap:3px 10px;margin-top:8px}
+  .orcall{margin-top:6px}
+  .legal{line-height:1.32;padding-top:5px}
+  .top{gap:10px}
+  .brandmark .bn small{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<div class="fold">
+
+  <div class="top">
+    <div class="brandmark">
+      <svg viewBox="0 0 112 132" aria-hidden="true"><path d="M18 62 L42 88 L96 12" fill="none" stroke="#1F4A38" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 108 Q56 128 104 108" fill="none" stroke="#B97F24" stroke-width="9" stroke-linecap="round"/></svg>
+      <span class="bn">The Medicare Workshop<small>Tyler Insurance Group</small></span>
+    </div>
+    <a class="topcall" href="tel:+18596186443">📞 (859) 618-6443</a>
+  </div>
+
+  <div class="grid">
+
+    <div class="pitch">
+      <p class="eyebrow">Free live class · Kentuckians turning 65</p>
+      <h1>Get Medicare right the <span class="hl">first time.</span></h1>
+      <p class="sub">One free hour with the Lexington agent who has guided <b>over 1,000 Kentuckians</b> through Medicare.<span class="wide"> You'll leave knowing your deadlines, your real options, and your next step.</span> <b>Nothing is sold.</b></p>
+
+      <button class="cta" type="button" id="openBtn">Save My Free Seat →</button>
+
+      <div class="reassure">
+        <span>Free, always</span>
+        <span>No plans pitched</span>
+        <span>No obligation</span>
+        <span>Licensed KY agent</span>
+      </div>
+
+      <p class="orcall">Rather talk? Call <a href="tel:+18596186443">(859) 618-6443</a><span class="wide"> and we'll save your seat on the phone</span>.</p>
+
+      <div class="steps">
+        <span><b>1</b>Pick a time</span>
+        <span><b>2</b>Click one link</span>
+        <span><b>3</b>Leave knowing what to do</span>
+      </div>
+    </div>
+
+    <div class="proof">
+      <div class="proofcard">
+        <div class="who">
+          <div class="shot"><img src="/assets/images/austin-tyler.jpg" alt="Austin Tyler, MBA, licensed Kentucky insurance agent" onerror="this.remove()"></div>
+          <div class="said">
+            <p>“This is what I do for a living. My job is to explain your options, not to sell you one.”</p>
+            <cite>Austin Tyler, MBA · Tyler Insurance Group, Lexington</cite>
+          </div>
+        </div>
+      </div>
+
+      <div class="proofcard stats">
+        <div class="stat"><div class="n">1,000+</div><div class="l">Kentuckians<br>guided</div></div>
+        <div class="stat"><div class="n">68</div><div class="l">Google<br>reviews</div></div>
+        <div class="stat"><div class="n">$0</div><div class="l">Cost to you,<br>ever</div></div>
+      </div>
+
+      <div class="quotes">
+        <div class="q">
+          <div class="st" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>I received so much good information it was broke down that I understood Medicare when I left the seminar I was well pleased</p>
+          <cite>Betty Hunt · Google review</cite>
+        </div>
+        <div class="q">
+          <div class="st" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>Very helpful without being pushy! Highly recommend him for all of your medicare needs!</p>
+          <cite>Heyward Harrington · Google review</cite>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="legal">
+    Educational event only. No plan benefits discussed, no enrollment taken. Tyler Insurance Group is a licensed insurance
+    agency, not affiliated with or endorsed by the U.S. government or the federal Medicare program.
+    <a href="https://www.medicare.gov">Medicare.gov</a> · 1-800-MEDICARE (TTY 1-877-486-2048).
+  </p>
+
+</div>
+
+<!-- Two-step opt-in: the click is a micro-commitment, and it keeps the fold clean. -->
+<div class="scrim" id="scrim" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal">
+    <button class="close" type="button" id="closeBtn" aria-label="Close">&times;</button>
+    <h2 id="mTitle">Save your free seat</h2>
+    <p class="mp">Takes about 30 seconds. Next you'll pick the time that suits you.</p>
+    <form id="leadForm" novalidate>
+      <label for="fname">First name</label>
+      <input id="fname" name="first_name" autocomplete="given-name" required placeholder="Mary">
+      <label for="lname">Last name</label>
+      <input id="lname" name="last_name" autocomplete="family-name" required placeholder="Johnson">
+      <label for="fphone">Phone</label>
+      <input id="fphone" name="phone" type="tel" autocomplete="tel" required placeholder="(859) 555-0100">
+      <label for="femail">Email</label>
+      <input id="femail" name="email" type="email" autocomplete="email" required placeholder="mary@example.com">
+      <button class="cta" type="submit">Choose My Time →</button>
+      <p class="fine">Used only to send your class link and one reminder. We never sell your information. No plans are pitched at this event.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+(function () {
+  var scrim = document.getElementById('scrim');
+  var openBtn = document.getElementById('openBtn');
+  var closeBtn = document.getElementById('closeBtn');
+  var form = document.getElementById('leadForm');
+  var lastFocus = null;
+
+  function open() {
+    lastFocus = document.activeElement;
+    scrim.classList.add('open');
+    document.getElementById('fname').focus();
+    if (window.fbq) fbq('track', 'InitiateCheckout');
+  }
+  function close() {
+    scrim.classList.remove('open');
+    if (lastFocus) lastFocus.focus();
+  }
+  openBtn.addEventListener('click', open);
+  closeBtn.addEventListener('click', close);
+  scrim.addEventListener('click', function (e) { if (e.target === scrim) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && scrim.classList.contains('open')) close(); });
+
+  // Carry ad attribution through to the booking step so each market can be measured.
+  function utms() {
+    var p = new URLSearchParams(location.search), out = [];
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid'].forEach(function (k) {
+      var v = p.get(k); if (v) out.push(encodeURIComponent(k) + '=' + encodeURIComponent(v));
+    });
+    return out;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    var q = [
+      'first_name=' + encodeURIComponent(form.first_name.value.trim()),
+      'last_name='  + encodeURIComponent(form.last_name.value.trim()),
+      'email='      + encodeURIComponent(form.email.value.trim()),
+      'phone='      + encodeURIComponent(form.phone.value.trim())
+    ].concat(utms());
+    if (window.fbq) fbq('track', 'Lead');
+    // TODO: also POST to a GoHighLevel webhook here so partial leads are captured
+    // even if someone abandons at the calendar step.
+    window.location.href =
+      'https://link.runonforge.us/widget/booking/op00KeLdI1rg31F7lA6c?' + q.join('&');
+  });
+})();
+</script>
+
+</body>
+</html>
