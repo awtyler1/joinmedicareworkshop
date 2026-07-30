@@ -1,0 +1,331 @@
+<title>Design 1 · The Front Porch — Medicare Workshop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  /* ============ THE FRONT PORCH ============
+     A letter from a neighbor. Warm oat paper, deep bluegrass
+     green, honey accent. Serif-forward, big type for 64+ eyes.
+     Deliberately single-theme: warm daylight, like Kentucky
+     morning light on a porch. */
+  :root {
+    --paper: #F7F2E7;
+    --paper-deep: #EFE7D5;
+    --green: #1F4A38;
+    --green-deep: #143326;
+    --honey: #B97F24;
+    --honey-soft: #E9D9B8;
+    --ink: #262218;
+    --ink-soft: #5C543F;
+    --white: #FFFDF8;
+    --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
+    --sans: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--serif); font-size: 20px; line-height: 1.6;
+  }
+  a { color: var(--green); }
+  img { max-width: 100%; }
+
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--green); color: var(--white);
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; padding: 14px 24px;
+    border-bottom: 3px solid var(--honey);
+  }
+  .topbar .brand { font-family: var(--serif); font-size: 20px; letter-spacing: .2px; }
+  .topbar .brand em { font-style: normal; color: var(--honey-soft); }
+  .topbar .phone {
+    font-family: var(--sans); font-weight: 700; font-size: 18px;
+    color: var(--white); text-decoration: none;
+    background: rgba(255,255,255,.12); padding: 8px 16px; border-radius: 999px;
+    white-space: nowrap;
+  }
+  .topbar .phone:hover { background: rgba(255,255,255,.22); }
+
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+  .narrow { max-width: 720px; margin: 0 auto; }
+
+  /* HERO */
+  .hero { padding: 72px 0 56px; }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: start; }
+  @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+  .kicker {
+    font-family: var(--sans); font-size: 15px; font-weight: 700;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--honey);
+    margin: 0 0 18px;
+  }
+  h1 {
+    font-size: clamp(38px, 5.2vw, 58px); line-height: 1.12;
+    margin: 0 0 22px; font-weight: 600; text-wrap: balance; color: var(--green-deep);
+  }
+  .hero p.lede { font-size: 23px; color: var(--ink-soft); margin: 0 0 30px; max-width: 34ch; }
+  .rule { border: 0; border-top: 2px solid var(--honey-soft); margin: 0 0 26px; width: 88px; }
+
+  .cta, button.cta {
+    display: inline-block; font-family: var(--sans); font-weight: 700;
+    font-size: 21px; color: var(--white); background: var(--green);
+    padding: 18px 34px; border-radius: 10px; text-decoration: none;
+    border: 0; cursor: pointer; box-shadow: 0 3px 0 var(--green-deep);
+  }
+  .cta:hover { background: var(--green-deep); }
+  .cta-note { font-family: var(--sans); font-size: 16px; color: var(--ink-soft); margin-top: 14px; }
+
+  /* Form card */
+  .form-card {
+    background: var(--white); border: 1px solid var(--paper-deep);
+    border-top: 6px solid var(--honey); border-radius: 14px;
+    padding: 30px 28px; box-shadow: 0 12px 32px rgba(38,34,24,.10);
+  }
+  .form-card h2 { margin: 0 0 6px; font-size: 25px; color: var(--green-deep); }
+  .form-card .seats { font-family: var(--sans); font-size: 15px; color: var(--honey); font-weight: 700; margin: 0 0 18px; }
+  .form-card label { display: block; font-family: var(--sans); font-size: 15px; font-weight: 700; margin: 14px 0 6px; color: var(--ink-soft); }
+  .form-card input, .form-card select {
+    width: 100%; font-size: 19px; font-family: var(--serif);
+    padding: 13px 14px; border: 2px solid var(--paper-deep); border-radius: 8px;
+    background: var(--paper); color: var(--ink);
+  }
+  .form-card input:focus, .form-card select:focus { outline: 3px solid var(--honey); outline-offset: 1px; }
+  .form-card button { width: 100%; margin-top: 22px; }
+  .form-card .privacy { font-size: 14.5px; font-family: var(--sans); color: var(--ink-soft); margin: 14px 0 0; line-height: 1.5; }
+
+  /* Trust strip */
+  .trust {
+    background: var(--paper-deep); padding: 22px 0; margin-top: 8px;
+  }
+  .trust-row { display: flex; flex-wrap: wrap; gap: 12px 40px; justify-content: center; font-family: var(--sans); font-size: 16.5px; color: var(--ink-soft); }
+  .trust-row span::before { content: "✓ "; color: var(--green); font-weight: 700; }
+
+  section { padding: 72px 0; }
+  h2.sec {
+    font-size: clamp(30px, 3.6vw, 40px); color: var(--green-deep);
+    margin: 0 0 14px; text-wrap: balance;
+  }
+  .sec-kick { font-family: var(--sans); font-size: 14px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--honey); margin: 0 0 10px; }
+  .sec-lede { font-size: 21px; color: var(--ink-soft); max-width: 60ch; margin: 0 0 40px; }
+
+  /* Learn list */
+  .learn { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  @media (max-width: 760px) { .learn { grid-template-columns: 1fr; } }
+  .learn-item {
+    background: var(--white); border: 1px solid var(--paper-deep); border-radius: 12px;
+    padding: 24px 26px; display: flex; gap: 18px; align-items: flex-start;
+  }
+  .learn-item .tick {
+    flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%;
+    background: var(--green); color: var(--paper); font-family: var(--sans); font-weight: 700;
+    display: grid; place-items: center; font-size: 18px; margin-top: 3px;
+  }
+  .learn-item h3 { margin: 0 0 6px; font-size: 21.5px; color: var(--green-deep); }
+  .learn-item p { margin: 0; font-size: 18px; color: var(--ink-soft); line-height: 1.55; }
+
+  /* Why free */
+  .whyfree { background: var(--green); color: var(--paper); }
+  .whyfree h2 { color: var(--white); }
+  .whyfree .sec-kick { color: var(--honey-soft); }
+  .whyfree p { font-size: 21px; line-height: 1.7; color: #E8E2D0; }
+  .whyfree .promise {
+    margin-top: 34px; border-left: 4px solid var(--honey);
+    padding: 6px 0 6px 24px; font-size: 22px; color: var(--white); font-style: italic;
+  }
+
+  /* Hosts */
+  .hosts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; margin-top: 44px; }
+  @media (max-width: 760px) { .hosts-grid { grid-template-columns: 1fr; } }
+  .host { background: var(--white); border: 1px solid var(--paper-deep); border-radius: 14px; overflow: hidden; }
+  .host .photo {
+    aspect-ratio: 4 / 3; background: repeating-linear-gradient(45deg, var(--paper-deep), var(--paper-deep) 14px, var(--paper) 14px, var(--paper) 28px);
+    display: grid; place-items: center; color: var(--ink-soft);
+    font-family: var(--sans); font-size: 16px; font-weight: 700; letter-spacing: .05em;
+  }
+  .host .body { padding: 26px 28px 30px; }
+  .host h3 { margin: 0; font-size: 24px; color: var(--green-deep); }
+  .host .role { font-family: var(--sans); font-size: 15px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--honey); margin: 6px 0 14px; }
+  .host p { margin: 0; font-size: 18.5px; color: var(--ink-soft); line-height: 1.6; }
+
+  /* Testimonials */
+  .quotes { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px; margin-top: 40px; }
+  @media (max-width: 900px) { .quotes { grid-template-columns: 1fr; } }
+  .quote { background: var(--white); border: 1px solid var(--paper-deep); border-radius: 12px; padding: 28px; }
+  .quote p { margin: 0 0 18px; font-size: 19px; font-style: italic; line-height: 1.6; }
+  .quote p::before { content: "“"; color: var(--honey); font-size: 34px; line-height: 0; vertical-align: -8px; margin-right: 4px; }
+  .quote cite { font-family: var(--sans); font-style: normal; font-size: 15.5px; font-weight: 700; color: var(--ink-soft); }
+
+  /* Sessions */
+  .sessions { display: grid; gap: 16px; margin-top: 40px; }
+  .session {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px;
+    background: var(--white); border: 1px solid var(--paper-deep); border-radius: 12px;
+    padding: 22px 26px;
+  }
+  .session .date { font-family: var(--sans); font-weight: 700; font-size: 20px; color: var(--green-deep); min-width: 250px; }
+  .session .kind { font-family: var(--sans); font-size: 15px; color: var(--honey); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  .session a { margin-left: auto; font-size: 18px; padding: 12px 24px; }
+  @media (max-width: 640px) { .session a { margin-left: 0; } }
+
+  /* FAQ */
+  details {
+    background: var(--white); border: 1px solid var(--paper-deep); border-radius: 12px;
+    padding: 22px 26px; margin-bottom: 14px;
+  }
+  details summary { font-size: 21px; font-weight: 600; color: var(--green-deep); cursor: pointer; }
+  details summary:focus-visible { outline: 3px solid var(--honey); }
+  details p { margin: 14px 0 0; font-size: 19px; color: var(--ink-soft); line-height: 1.65; }
+
+  /* Final CTA */
+  .final { text-align: center; background: var(--paper-deep); }
+  .final h2 { font-size: clamp(32px, 4vw, 44px); color: var(--green-deep); margin: 0 0 16px; text-wrap: balance; }
+  .final p { font-size: 21px; color: var(--ink-soft); margin: 0 auto 32px; max-width: 52ch; }
+
+  footer { background: var(--green-deep); color: #BBB4A0; padding: 48px 0 56px; font-family: var(--sans); font-size: 15px; line-height: 1.65; }
+  footer .fbrand { color: var(--paper); font-family: var(--serif); font-size: 20px; margin-bottom: 16px; }
+  footer p { max-width: 90ch; margin: 0 0 14px; }
+</style>
+
+<header class="topbar">
+  <div class="brand">The Medicare Workshop <em>· by Tyler Insurance Group</em></div>
+  <a class="phone" href="tel:+18595550123">📞 (859) 555-0123</a>
+</header>
+
+<div class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <p class="kicker">A free, plain-English class for Kentucky seniors</p>
+      <h1>Medicare, explained the way a neighbor would explain it.</h1>
+      <hr class="rule">
+      <p class="lede">One free hour, from your own living room. No sales pitch, no jargon, no pressure — just the answers you've been looking for.</p>
+      <a class="cta" href="#register">Save My Free Seat</a>
+      <p class="cta-note">Prefer the phone? Call us — a real person in Lexington answers.</p>
+    </div>
+    <div class="form-card" id="register">
+      <h2>Reserve your seat</h2>
+      <p class="seats">Free · Online webinar · About 60 minutes</p>
+      <form onsubmit="event.preventDefault(); this.innerHTML='<h2>You\'re all set! 🎉</h2><p style=\'font-size:19px\'>Check your email for your webinar link. We look forward to seeing you.</p>'">
+        <label for="f1-name">First and last name</label>
+        <input id="f1-name" required autocomplete="name" placeholder="Mary Johnson">
+        <label for="f1-email">Email address</label>
+        <input id="f1-email" type="email" required autocomplete="email" placeholder="mary@example.com">
+        <label for="f1-phone">Phone number</label>
+        <input id="f1-phone" type="tel" required autocomplete="tel" placeholder="(859) 555-0100">
+        <label for="f1-date">Pick a date that suits you</label>
+        <select id="f1-date">
+          <option>Tue, Aug 11 · 10:00 AM ET</option>
+          <option>Thu, Aug 13 · 6:30 PM ET</option>
+          <option>Tue, Aug 18 · 10:00 AM ET</option>
+        </select>
+        <button class="cta" type="submit">Save My Free Seat</button>
+        <p class="privacy">We'll only use this to send your webinar link and a reminder. We never sell your information. Ever.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="trust">
+  <div class="wrap trust-row">
+    <span>Licensed Kentucky agents</span>
+    <span>100% free — always</span>
+    <span>No plan sales at this event</span>
+    <span>Hundreds of Kentuckians helped</span>
+  </div>
+</div>
+
+<section class="wrap">
+  <p class="sec-kick">What you'll walk away with</p>
+  <h2 class="sec">Sixty minutes from now, Medicare will finally make sense.</h2>
+  <p class="sec-lede">We built this workshop after years of watching good people get buried in mailers, robocalls, and fine print. Here's exactly what we cover:</p>
+  <div class="learn">
+    <div class="learn-item"><div class="tick">1</div><div><h3>The four parts of Medicare — in plain English</h3><p>A, B, C, and D, explained with real examples instead of government language. You'll know what each one actually does for you.</p></div></div>
+    <div class="learn-item"><div class="tick">2</div><div><h3>The deadlines that can cost you money</h3><p>Miss certain windows and you can pay a penalty for life. We'll show you your exact dates so that never happens to you.</p></div></div>
+    <div class="learn-item"><div class="tick">3</div><div><h3>Advantage vs. Supplement — the honest comparison</h3><p>The trade-offs nobody explains on TV. What each path really means for your doctors, your travel, and your wallet.</p></div></div>
+    <div class="learn-item"><div class="tick">4</div><div><h3>The 5 most expensive Medicare mistakes</h3><p>We've seen every one of them happen to Kentucky families. Fifteen minutes of prevention that can save thousands.</p></div></div>
+    <div class="learn-item"><div class="tick">5</div><div><h3>Your questions, answered live</h3><p>Bring your situation. We stay until the questions are done — that's the whole point.</p></div></div>
+    <div class="learn-item"><div class="tick">6</div><div><h3>The Medicare Made Simple™ checklist</h3><p>Every attendee gets our printed-style checklist and deadline cheat sheet to keep — so you leave with a plan, not just notes.</p></div></div>
+  </div>
+</section>
+
+<section class="whyfree">
+  <div class="wrap narrow">
+    <p class="sec-kick">The honest part</p>
+    <h2 class="sec">Why would we do all this for free?</h2>
+    <p>Fair question — and you deserve a straight answer.</p>
+    <p>We're Medicare agents here in Lexington. After a workshop, some folks ask us to help them sort through their options one-on-one. When we help someone find coverage, the insurance company pays us — <strong>you never pay us a dime, and your price is the same with or without us.</strong></p>
+    <p>Most attendees never become clients, and that's perfectly fine. Our bet is simple: if we're genuinely useful to enough of our neighbors, our business takes care of itself.</p>
+    <p class="promise">Our promise: this workshop is education only. No plans pitched, no enrollment forms, no follow-up calls unless you ask for one.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <p class="sec-kick">Meet your hosts</p>
+  <h2 class="sec">Two Lexington guys who got tired of watching neighbors get confused.</h2>
+  <p class="sec-lede">We're not a call center in another state. We live here, our families are here, and we'll be the ones on your screen.</p>
+  <div class="hosts-grid">
+    <div class="host">
+      <div class="photo">[ PHOTO OF AUSTIN — warm, outdoors, smiling ]</div>
+      <div class="body">
+        <h3>Austin Tyler</h3>
+        <p class="role">Founder · Tyler Insurance Group</p>
+        <p>Austin started Tyler Insurance Group after helping his own family navigate Medicare and realizing how needlessly confusing it is. His rule for every workshop: "If my grandmother wouldn't understand it, we're not saying it that way."</p>
+      </div>
+    </div>
+    <div class="host">
+      <div class="photo">[ PHOTO OF ANDREW — warm, outdoors, smiling ]</div>
+      <div class="body">
+        <h3>Andrew [Last Name]</h3>
+        <p class="role">Co-Host · Licensed Agent</p>
+        <p>Andrew has walked hundreds of Kentuckians through their first Medicare decisions. He's the one who stays late answering questions — and the reason our Q&A sessions routinely run past the hour.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <p class="sec-kick">Kind words from neighbors</p>
+  <h2 class="sec">Don't take our word for it.</h2>
+  <div class="quotes">
+    <div class="quote"><p>I'd been drowning in mailers for months. One hour with these two and I finally understood my options. I only wish I'd found them sooner.</p><cite>— Linda R., Lexington</cite></div>
+    <div class="quote"><p>No pressure, no pitch. They answered every single question I had, including the ones I was embarrassed to ask.</p><cite>— James & Carol T., Georgetown</cite></div>
+    <div class="quote"><p>My daughter signed me up for the webinar. Easiest thing I've done on a computer all year, and worth every minute.</p><cite>— Dorothy M., Nicholasville</cite></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <p class="sec-kick">Upcoming workshops</p>
+  <h2 class="sec">Pick an hour. We'll handle the rest.</h2>
+  <div class="sessions">
+    <div class="session"><span class="date">Tuesday, August 11 · 10:00 AM ET</span><span class="kind">Online webinar</span><a class="cta" href="#register">Save My Seat</a></div>
+    <div class="session"><span class="date">Thursday, August 13 · 6:30 PM ET</span><span class="kind">Online webinar</span><a class="cta" href="#register">Save My Seat</a></div>
+    <div class="session"><span class="date">Tuesday, August 18 · 10:00 AM ET</span><span class="kind">Online webinar</span><a class="cta" href="#register">Save My Seat</a></div>
+  </div>
+</section>
+
+<section class="wrap narrow">
+  <p class="sec-kick">Common questions</p>
+  <h2 class="sec">You're probably wondering…</h2>
+  <details open><summary>Is this really free? What's the catch?</summary><p>Really free, and there's no catch. We're local agents — if you ever want one-on-one help after the workshop, the insurance companies pay us, never you. The workshop itself is pure education and always will be.</p></details>
+  <details><summary>Will you try to sell me something?</summary><p>No. This is an educational event — by design and by the rules we follow, no specific plans are pitched and no enrollment happens. If you want help afterward, you ask us, not the other way around.</p></details>
+  <details><summary>I'm not great with computers. Can I still join?</summary><p>Absolutely. If you can click a link in an email, you can join. We send simple instructions, and you can always call us and we'll walk you through it — or just attend by phone.</p></details>
+  <details><summary>I'm not 65 yet. Is this for me?</summary><p>If you're within about a year of 65 (or retiring soon), this is the perfect time. The costliest mistakes happen from starting too late.</p></details>
+  <details><summary>What if I can't make the date?</summary><p>Register anyway and we'll send you the recording — though the live Q&A is honestly the best part.</p></details>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>An hour from now, you could finally have this figured out.</h2>
+    <p>Free. From your couch. With two neighbors who do this every day. It costs you nothing but an hour — and that hour can save you thousands.</p>
+    <a class="cta" href="#register">Save My Free Seat</a>
+    <p class="cta-note">Or call us at (859) 555-0123 — we'd love to hear from you.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">The Medicare Workshop · Tyler Insurance Group · Lexington, Kentucky</div>
+    <p>This is an educational event intended to teach how Medicare works. No plan-specific benefits or details will be shared, and no enrollment applications will be accepted at this event.</p>
+    <p>Tyler Insurance Group is a licensed insurance agency. We are not affiliated with or endorsed by the U.S. government or the federal Medicare program. Attending a workshop creates no obligation of any kind.</p>
+    <p>For general Medicare information, you can always visit Medicare.gov or call 1-800-MEDICARE (TTY 1-877-486-2048), 24 hours a day, 7 days a week.</p>
+    <p>© 2026 Tyler Insurance Group. All rights reserved.</p>
+  </div>
+</footer>
