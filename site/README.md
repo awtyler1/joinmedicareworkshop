@@ -53,6 +53,29 @@ with `<img src="assets/images/austin-portrait.jpg" alt="Austin Tyler">`.
 - Contact form on contact.html is a visual demo. Wire to GoHighLevel or an
   email endpoint before launch.
 
+## Deployment (Vercel)
+
+`vercel.json` at the repo root tells Vercel to serve this folder as the web
+root:
+
+```json
+{ "outputDirectory": "site", "cleanUrls": true, "trailingSlash": false }
+```
+
+`cleanUrls` means pages are served without the `.html` extension, so internal
+links use `/workshops`, `/learn`, `/about`, `/contact`, and `/` for home.
+`404.html` is served automatically for unknown paths.
+
+Two things to know:
+
+1. **Vercel deploys production from the default branch (`main`).** Work on a
+   feature branch gets a preview URL, not the live domain. Merge to `main` to
+   go live.
+2. Because of `cleanUrls`, opening these files directly from disk
+   (`file://`) will not navigate between pages. To preview locally, serve the
+   folder: `cd site && python3 -m http.server 8000`, then visit
+   `localhost:8000`.
+
 ## Notes
 
 - The booking calendar on workshops.html is the GoHighLevel embed. One calendar
