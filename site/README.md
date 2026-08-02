@@ -11,7 +11,8 @@ site/
   contact.html      Phone first, what happens when you call, question form.
   free-class.html   Paid-traffic landing page for Meta ads. See below.
   thank-you.html    Post-booking page. Fires the conversion event.
-  lp/               Four landing page directions kept for reference.
+  lp/               Four workshop landing directions kept for reference.
+  lp2/              Five 1-on-1 advisor landing directions, statewide ad. In review.
   assets/
     site.css        Canonical stylesheet (see note below)
     images/         Photos go here
@@ -111,6 +112,30 @@ Hopewell), reviews truncated by Google's "View full review" (Brenda Ball
 Heilig, John Mello) since a partial quote cannot be verified as written, and
 Gwen Perkins, whose review mentions food at an in-person seminar and would
 mislead someone booking a webinar.
+
+## The 1-on-1 advisor pages (/lp2/)
+
+Five directions for the statewide appointment ad, calendar
+d8bRC0hzOnha9XAdaCoD embedded on each. Review picker at /lp2.
+
+**These pages are a SALES-APPOINTMENT funnel, not an educational event.**
+That changes the compliance language entirely:
+
+- The educational-event disclaimer is deliberately absent. It would be false
+  here and must never be pasted onto these pages.
+- The CMS TPMO disclosure is REQUIRED and present on all five, with
+  placeholders: "We do not offer every plan available in your area. Currently
+  we represent [X] organizations which offer [Y] products in your area..."
+  **[X] and [Y] must be replaced with real counts before any ad runs.**
+- Copy avoids plan benefit and savings claims. Bullets promise process and
+  clarity (deadlines mapped, doctors checked, questions answered, a written
+  next step), never plan outcomes.
+- Scope of Appointment: CMS requires an SOA before an appointment where
+  MA/PDP products are discussed. Confirm the GHL booking flow captures it,
+  or that it is signed at the start of the appointment.
+- No Meta pixel on the mockups yet; it goes on the chosen page at ship time,
+  along with a thank-you redirect for conversion tracking, same pattern as
+  /free-class.
 
 ## Meta Pixel and conversion tracking
 
