@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meet Your Kentucky Medicare Advisor | Free</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#F7F3E9">
+<link rel="preconnect" href="https://link.runonforge.us" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- BLEND 3 · PORCH LEDGER: a true 50/50. Kentucky's Bitter slab voice and
+     ledger rules around Heirloom's arched portrait and centered calendar. -->
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500;0,600;0,800;1,500&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://link.runonforge.us/js/form_embed.js" defer></script>
+<style>
+:root{
+  --slab:'Bitter',Georgia,serif;
+  --sans:'Public Sans','Helvetica Neue',Arial,system-ui,sans-serif;
+  --paper:#F7F3E9;--card:#FFFDF8;--rule:#E0D8C5;
+  --green:#1F4A38;--green-d:#12291F;--oak:#B97F24;
+  --ink:#211E18;--ink-2:#5E574A;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:var(--green)}
+.page{max-width:1060px;margin:0 auto;padding:clamp(18px,3vw,32px) clamp(18px,4vw,34px) clamp(30px,4vw,48px)}
+
+.mast{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:12px}
+.mast .b{display:flex;align-items:center;gap:10px}
+.mast .b svg{width:26px;height:auto}
+.mast .b span{font-family:var(--slab);font-weight:800;font-size:18px;color:var(--green-d)}
+.mast .place{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--oak)}
+.rail{border:0;border-top:2px solid var(--green);margin:0 0 3px}
+.rail+.rail{border-top-width:1px;border-color:var(--rule);margin-bottom:0}
+
+.hero{display:grid;grid-template-columns:minmax(0,330px) minmax(0,1fr);gap:clamp(26px,4.5vw,60px);align-items:center;padding:clamp(28px,5vh,50px) 0 clamp(26px,4.5vh,44px)}
+@media (max-width:840px){ .hero{grid-template-columns:1fr;max-width:520px;margin:0 auto} }
+
+/* Heirloom's arch, capped with Kentucky's oak strap */
+.arch{max-width:330px;margin:0 auto}
+.arch .frame{border-radius:165px 165px 10px 10px;overflow:hidden;background:var(--rule);border:1px solid var(--rule);border-bottom:4px solid var(--oak);box-shadow:0 18px 42px rgba(33,30,24,.16)}
+.arch img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 12%}
+.arch .cap{text-align:center;margin-top:13px}
+.arch .cap b{display:block;font-family:var(--slab);font-weight:800;font-size:19px;color:var(--green-d)}
+.arch .cap span{font-size:13.5px;color:var(--ink-2)}
+
+.k{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--oak);margin:0 0 12px}
+h1{
+  font-family:var(--slab);font-weight:800;font-size:clamp(30px,4.2vw,46px);
+  line-height:1.1;letter-spacing:-.01em;color:var(--green-d);margin:0 0 clamp(13px,2vh,19px);text-wrap:balance;
+}
+h1 em{font-style:italic;font-weight:500;color:var(--oak)}
+.sub{font-size:clamp(16px,1.85vw,19px);line-height:1.6;color:var(--ink-2);margin:0 0 clamp(16px,2.6vh,22px);max-width:46ch}
+.sub b{color:var(--ink);font-weight:700}
+
+/* Kentucky's ledger rules, statewide line folded into the ledger itself */
+.val{list-style:none;margin:0 0 clamp(14px,2.2vh,18px);padding:0;border-top:1px solid var(--rule)}
+.val li{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--rule);font-size:clamp(15.5px,1.75vw,18px)}
+.val li b{font-weight:700;color:var(--green-d)}
+.val .ck{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--green);display:grid;place-items:center;margin-top:2px}
+.val .ck svg{width:11px;height:auto}
+.callline{font-size:16.5px;color:var(--ink-2);margin:0}
+.callline a{font-weight:700;white-space:nowrap}
+
+/* Heirloom's centered calendar with a Bitter lead-in */
+.leadin{text-align:center;max-width:58ch;margin:clamp(10px,2vh,20px) auto clamp(20px,3.2vh,30px)}
+.leadin h2{font-family:var(--slab);font-weight:800;font-size:clamp(25px,3.3vw,36px);color:var(--green-d);line-height:1.12;margin:0 0 10px;text-wrap:balance}
+.leadin p{font-size:clamp(15.5px,1.8vw,18px);color:var(--ink-2);margin:0}
+.leadin p b{color:var(--oak);font-weight:700}
+.book{max-width:760px;margin:0 auto;background:var(--card);border:1px solid var(--rule);border-top:4px solid var(--oak);border-radius:10px;padding:10px;position:relative;min-height:660px;box-shadow:0 16px 38px rgba(33,30,24,.11)}
+.book iframe{width:100%;min-height:640px;border:0;opacity:0;transition:opacity .3s ease}
+.book.ready iframe{opacity:1}
+.calload{position:absolute;inset:10px;display:grid;place-items:center;text-align:center;padding:26px;background:var(--card);border-radius:8px;z-index:2;transition:opacity .3s ease}
+.book.ready .calload{opacity:0;visibility:hidden;pointer-events:none}
+.spin{width:34px;height:34px;border-radius:50%;border:3px solid var(--rule);border-top-color:var(--oak);animation:sp .9s linear infinite;margin:0 auto 16px}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation:none}}
+.calload h2{font-family:var(--slab);font-weight:800;font-size:20px;margin:0 0 8px;color:var(--green-d)}
+.calload p{margin:0;font-size:16px;color:var(--ink-2);max-width:34ch}
+
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 26px;margin:clamp(22px,3.6vh,34px) auto 0;font-size:15px;font-weight:600;color:var(--ink-2)}
+.trust span{display:flex;align-items:center;gap:7px}
+.trust span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--oak)}
+.legal{margin:clamp(26px,4vh,40px) 0 0;padding-top:14px;border-top:1px solid var(--rule);font-size:12px;line-height:1.55;color:var(--ink-2);opacity:.85;text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="mast">
+    <div class="b">
+      <svg viewBox="0 0 112 132" aria-hidden="true"><path d="M18 62 L42 88 L96 12" fill="none" stroke="#1F4A38" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 108 Q56 128 104 108" fill="none" stroke="#B97F24" stroke-width="9" stroke-linecap="round"/></svg>
+      <span>Tyler Insurance Group</span>
+    </div>
+    <div class="place">Serving all of Kentucky</div>
+  </div>
+  <hr class="rail"><hr class="rail">
+
+  <div class="hero">
+    <div class="arch">
+      <div class="frame"><img src="/assets/images/austin-tyler.jpg" alt="Austin Tyler, licensed Kentucky Medicare advisor"></div>
+      <div class="cap"><b>Austin Tyler, MBA</b><span>Licensed Medicare advisor · Lexington, Kentucky</span></div>
+    </div>
+    <div>
+      <p class="k">A free 1-on-1 appointment · Phone, video, or in person</p>
+      <h1>Your Medicare advisor <em>actually lives here.</em></h1>
+      <p class="sub">This is what Austin does for a living: educate, inform, and walk you through your options one at a time. Over <b>1,000 Kentuckians</b> have sat down with him. <b>The decision always stays yours.</b></p>
+
+      <ul class="val">
+        <li><span class="ck"><svg viewBox="0 0 112 100"><path d="M14 54 L42 84 L98 14" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Your deadlines, mapped out</b> before penalties can sneak up</span></li>
+        <li><span class="ck"><svg viewBox="0 0 112 100"><path d="M14 54 L42 84 L98 14" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Your doctors and prescriptions, checked</b> against your options</span></li>
+        <li><span class="ck"><svg viewBox="0 0 112 100"><path d="M14 54 L42 84 L98 14" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Every question, answered</b> in plain English</span></li>
+        <li><span class="ck"><svg viewBox="0 0 112 100"><path d="M14 54 L42 84 L98 14" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>A clear next step, in writing</b>, even if you never call again</span></li>
+      </ul>
+
+      <p class="callline">Rather just call? <a href="tel:+18596186443">(859) 618-6443</a>. Austin answers.</p>
+    </div>
+  </div>
+
+  <div class="leadin">
+    <h2>Pick a time. Bring your questions.</h2>
+    <p>By phone and video <b>anywhere in Kentucky</b>, or across the desk in Lexington. The pile of mail is welcome too.</p>
+  </div>
+
+  <div class="book" id="bk">
+    <div class="calload" id="ld">
+      <div>
+        <div class="spin" aria-hidden="true"></div>
+        <h2>Loading Austin's calendar</h2>
+        <p>A few seconds. If you'd rather not wait, call <a href="tel:+18596186443">(859) 618-6443</a>.</p>
+      </div>
+    </div>
+    <iframe id="cf" src="https://link.runonforge.us/widget/booking/d8bRC0hzOnha9XAdaCoD" scrolling="no" title="Pick a time to meet with Austin"></iframe>
+  </div>
+
+  <div class="trust">
+    <span>1,000+ Kentuckians helped</span>
+    <span>68 Google reviews</span>
+    <span>Real office in Lexington</span>
+    <span>No cost, no obligation</span>
+  </div>
+
+  <p class="legal">Tyler Insurance Group is a licensed insurance agency, not affiliated with or endorsed by the U.S. government or the federal Medicare program. We do not offer every plan available in your area. Currently we represent [X] organizations which offer [Y] products in your area. Please contact <a href="https://www.medicare.gov">Medicare.gov</a>, 1-800-MEDICARE (TTY 1-877-486-2048), or your local State Health Insurance Assistance Program to get information on all of your options.</p>
+</div>
+
+<script>
+(function(){var b=document.getElementById('bk'),f=document.getElementById('cf'),d=false;
+function go(){if(d)return;d=true;b.classList.add('ready')}
+f.addEventListener('load',function(){setTimeout(go,800)});
+window.addEventListener('message',function(e){if((e.origin||'').indexOf('runonforge')>-1)go()});
+setTimeout(function(){if(!d)document.getElementById('ld').innerHTML='<div><h2>The calendar is being slow.</h2><p>Call <a href="tel:+18596186443">(859) 618-6443</a> and we will find you a time in about a minute.</p></div>'},12000);})();
+</script>
+</body>
+</html>
