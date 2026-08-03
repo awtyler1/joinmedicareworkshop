@@ -12,7 +12,9 @@ site/
   free-class.html   Paid-traffic landing page for Meta ads. See below.
   thank-you.html    Post-booking page. Fires the conversion event.
   lp/               Four workshop landing directions kept for reference.
-  lp2/              Five 1-on-1 advisor landing directions, statewide ad. In review.
+  advisor.html      LIVE 1-on-1 appointment landing page (Porch Ledger).
+  thank-you-advisor.html  Post-booking page for the advisor calendar.
+  lp2/              Advisor landing explorations kept for reference.
   assets/
     site.css        Canonical stylesheet (see note below)
     images/         Photos go here
@@ -123,19 +125,22 @@ That changes the compliance language entirely:
 
 - The educational-event disclaimer is deliberately absent. It would be false
   here and must never be pasted onto these pages.
-- The CMS TPMO disclosure is REQUIRED and present on all five, with
-  placeholders: "We do not offer every plan available in your area. Currently
-  we represent [X] organizations which offer [Y] products in your area..."
-  **[X] and [Y] must be replaced with real counts before any ad runs.**
+- The CMS TPMO disclosure is REQUIRED and filled in with real counts:
+  **6 organizations, 68 products** (provided 2026-08). These counts change
+  with contracts and plan years. **Re-verify every AEP and any time carrier
+  appointments change**, on /advisor, /thank-you-advisor, and the lp2 pages.
 - Copy avoids plan benefit and savings claims. Bullets promise process and
   clarity (deadlines mapped, doctors checked, questions answered, a written
   next step), never plan outcomes.
 - Scope of Appointment: CMS requires an SOA before an appointment where
   MA/PDP products are discussed. Confirm the GHL booking flow captures it,
   or that it is signed at the start of the appointment.
-- No Meta pixel on the mockups yet; it goes on the chosen page at ship time,
-  along with a thank-you redirect for conversion tracking, same pattern as
-  /free-class.
+- Porch Ledger shipped as /advisor with the pixel, InitiateCheckout on first
+  calendar interaction, and /thank-you-advisor firing Schedule + Lead.
+  **Set the advisor calendar's post-booking redirect to /thank-you-advisor
+  in GoHighLevel** (calendar d8bRC0hzOnha9XAdaCoD), separate from the class
+  calendar's redirect to /thank-you. Until then, InitiateCheckout is the only
+  signal for this funnel.
 
 ## Meta Pixel and conversion tracking
 

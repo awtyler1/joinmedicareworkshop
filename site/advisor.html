@@ -3,8 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Meet Your Kentucky Medicare Advisor | Free</title>
-<meta name="robots" content="noindex,nofollow">
+<title>Meet Your Kentucky Medicare Advisor | Free 1-on-1 Appointment</title>
+<meta name="description" content="A free 1-on-1 appointment with Austin Tyler, a licensed Medicare advisor in Lexington serving all of Kentucky. Phone, video, or in person.">
+<meta name="robots" content="noindex,follow">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '27176602235306137');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=27176602235306137&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#F7F3E9">
 <link rel="preconnect" href="https://link.runonforge.us" crossorigin>
@@ -150,7 +169,12 @@ h1 em{font-style:italic;font-weight:500;color:var(--oak)}
 (function(){var b=document.getElementById('bk'),f=document.getElementById('cf'),d=false;
 function go(){if(d)return;d=true;b.classList.add('ready')}
 f.addEventListener('load',function(){setTimeout(go,800)});
-window.addEventListener('message',function(e){if((e.origin||'').indexOf('runonforge')>-1)go()});
+var eng=false;
+window.addEventListener('message',function(e){
+  if((e.origin||'').indexOf('runonforge')===-1)return;
+  go();
+  if(!eng){eng=true;if(window.fbq)fbq('track','InitiateCheckout');}
+});
 setTimeout(function(){if(!d)document.getElementById('ld').innerHTML='<div><h2>The calendar is being slow.</h2><p>Call <a href="tel:+18596186443">(859) 618-6443</a> and we will find you a time in about a minute.</p></div>'},12000);})();
 </script>
 </body>
